@@ -1,0 +1,30 @@
+{
+  "name": "constantinople",
+  "version": "1.0.2",
+  "description": "Determine whether a JavaScript expression evaluates to a constant (using UglifyJS)",
+  "keywords": [],
+  "dependencies": {
+    "uglify-js": "~2.4.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/constantinople.git"
+  },
+  "author": {
+    "name": "ForbesLindesay"
+  },
+  "license": "MIT",
+  "readme": "# constantinople\r\n\r\nDetermine whether a JavaScript expression evaluates to a constant (using UglifyJS).  Here it is assumed to be safe to underestimate how constant something is.\r\n\r\n[![Build Status](https://travis-ci.org/ForbesLindesay/constantinople.png?branch=master)](https://travis-ci.org/ForbesLindesay/constantinople)\r\n[![Dependency Status](https://gemnasium.com/ForbesLindesay/constantinople.png)](https://gemnasium.com/ForbesLindesay/constantinople)\r\n[![NPM version](https://badge.fury.io/js/constantinople.png)](http://badge.fury.io/js/constantinople)\r\n\r\n## Installation\r\n\r\n    npm install constantinople\r\n\r\n## Usage\r\n\r\n```js\r\nvar isConstant = require('constantinople')\r\n\r\nif (isConstant('\"foo\" + 5')) {\r\n  console.dir(isConstant.toConstant('\"foo\" + 5'))\r\n}\r\n```\r\n\r\n## API\r\n\r\n### isConstant(src)\r\n\r\nReturns `true` if `src` evaluates to a constant, `false` otherwise.  It will also return `false` if there is a syntax error, which makes it safe to use on potentially ES6 code.\r\n\r\n### toConstant(src)\r\n\r\nReturns the value resulting from evaluating `src`.  This method throws an error if the expression is not constant.  e.g. `toConstant(\"Math.random()\")` would throw an error.\r\n\r\n## License\r\n\r\n  MIT",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/ForbesLindesay/constantinople/issues"
+  },
+  "_id": "constantinople@1.0.2",
+  "_from": "constantinople@~1.0.1"
+}
