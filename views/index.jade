@@ -44,7 +44,7 @@ block content
   pre
     code.language-javascript.
       // POST adds a random id to the object sent
-      $.ajax('http://jsonplaceholder.com/posts', {
+      $.ajax('http://jsonplaceholder.herokuapp.com/posts', {
         method: 'POST',
         data: {
           title: 'foo',
@@ -67,7 +67,7 @@ block content
   pre
     code.language-javascript.
       // PUT returns the object sent
-      $.ajax('http://jsonplaceholder.com/posts/1', {
+      $.ajax('http://jsonplaceholder.herokuapp.com/posts/1', {
         method: 'PUT',
         data: {
           id: 1
@@ -91,7 +91,7 @@ block content
   pre
     code.language-javascript.
       // DELETE returns a 200 status only
-      $.ajax('http://jsonplaceholder.com/posts/1', {
+      $.ajax('http://jsonplaceholder.herokuapp.com/posts/1', {
         method: 'DELETE'
       });
 
@@ -116,7 +116,7 @@ block content
   pre
     code.language-javascript.
       // Will return all the posts that belong to the first user
-      $.ajax('http://jsonplaceholder.com/posts?userId=1').then(function(data) {
+      $.ajax('http://jsonplaceholder.herokuapp.com/posts?userId=1').then(function(data) {
         console.log(data);
       });
 
@@ -124,7 +124,7 @@ block content
 
   pre
     code.language-javascript.
-      $.ajax('http://jsonplaceholder.com/posts/1/comments').then(function(data) {
+      $.ajax('http://jsonplaceholder.herokuapp.com/posts/1/comments').then(function(data) {
         console.log(data);
       });
       // Which is equivalent to /comments?postId=1
@@ -135,7 +135,7 @@ block content
 
   pre
     code.language-javascript.
-      $.ajax('http://jsonplaceholder.com/posts/1', {
+      $.ajax('http://jsonplaceholder.herokuapp.com/posts/1', {
         dataType: 'jsonp'
       }).then(function(data) {
         console.log(data);
