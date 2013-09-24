@@ -41,7 +41,7 @@ var handleClick = function(e) {
   var url =  $(this).attr('href');
   $(this).parents('li').siblings().removeClass('active');
   $(this).parents('li').addClass('active');
-  $('#url').attr('href', url).text('http://jsonplaceholder.com' + url);
+  $('#url').attr('href', url).text('http://jsonplaceholder.herokuapp.com' + url);
   $.ajax(url).then(onSuccess);
 }
 
