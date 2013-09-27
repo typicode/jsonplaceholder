@@ -11,9 +11,6 @@
     "backbone": "1.0.0",
     "underscore": "1.4.4",
     "Faker": "0.5.7",
-    "jade": "*",
-    "markdown-js": "*",
-    "stylus": "*",
     "coffee-script": "*"
   },
   "engines": {

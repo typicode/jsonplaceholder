@@ -4,7 +4,6 @@ Module dependencies.
 ###
 express  = require 'express'
 cors     = require 'cors'
-routes   = require './routes'
 resource = require './routes/resource'
 http     = require 'http'
 path     = require 'path'
@@ -26,8 +25,7 @@ app.use app.router
 
 # development only
 app.use express.errorHandler() if 'development' is app.get('env')
-
-app.get    '/', routes.index                                   
+                             
 app.get    '/:resource', resource.list                         
 app.get    '/:parent/:parent_id/:resource', resource.nestedList
 app.get    '/:resource/:id', resource.show                     
