@@ -1,10 +1,10 @@
 JSONPlaceholder
 ===============
 
-JSONPlaceholder is simple fake online REST API for testing and prototyping
-It's like [image placeholders](http://placehold.it/) but for web developer.
+JSONPlaceholder is simple fake online REST API for testing and prototyping.
 
-You can find it running on Heroku: http://jsonplaceholder.typicode.com
+It's like [image placeholders](http://placehold.it/) but for web developers.
+
 
 Why?
 ----
@@ -14,7 +14,9 @@ I could either use a public API or hard code some data but:
 - Public APIs need registration and are often too much for basic prototyping
 - Hard coding data is boring and doesn't have real latency
 
-So here is JSONPlaceholder
+So here is JSONPlaceholder, I hope you'll find it useful.
+
+You can find it running here: http://jsonplaceholder.typicode.com feel free to use it.
 
 Features
 --------
@@ -169,7 +171,4 @@ $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
   console.log(data);
 });
 ```
-
-Install locally
----------------
 
