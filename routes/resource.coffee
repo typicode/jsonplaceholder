@@ -12,8 +12,8 @@ exports.list = (req, res) ->
 
 exports.nestedList = (req, res) ->
   properties = {}
-  properties["#{req.params.parent}Id"] = req.params.parendId
-  db[req.params.resource].where properties
+  properties["#{req.params.parent.slice(0, - 1)}Id"] = +req.params.parentId
+  res.jsonp db[req.params.resource].where properties
 
 exports.show = (req, res) ->
   res.jsonp db[req.params.resource].get req.params.id
