@@ -26,12 +26,12 @@ app.use app.router
 # development only
 app.use express.errorHandler() if 'development' is app.get('env')
                              
-app.get    '/:resource', resource.list                         
-app.get    '/:parent/:parentId/:resource', resource.nestedList
-app.get    '/:resource/:id', resource.show                     
-app.post   '/:resource', resource.create                       
-app.put    '/:resource', resource.update                       
-app.delete '/:resource', resource.destroy                      
+app.get    '/:resource', cors(), resource.list                         
+app.get    '/:parent/:parentId/:resource', cors(), resource.nestedList
+app.get    '/:resource/:id', cors(), resource.show                     
+app.post   '/:resource', cors(), resource.create                       
+app.put    '/:resource', cors(), resource.update                       
+app.delete '/:resource', cors(), resource.destroy                      
 
 http.createServer(app).listen app.get('port'), ->
   console.log 'Express server listening on port ' + app.get('port')
