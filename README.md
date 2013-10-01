@@ -46,7 +46,7 @@ Code samples
 ------------
 
 Here's some code using jQuery showing what can be done with JSONPlaceholder. 
-If jQuery is loaded you can simply copy and paste these examples in a console.
+Since GitHub loads jQuery, you can simply copy and paste these examples in a console.
 
 ### Listing resources
 
