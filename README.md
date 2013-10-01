@@ -15,9 +15,9 @@ I didn't like the idea of using some public API because I had the feeling that I
 
 But I liked the idea of image placeholders for web designers. So I decided to code a little Express server inspired by that and here is JSONPlaceholder.
 
-You can find it running here and are free to use it: http://jsonplaceholder.typicode.com. 
+You can find it running here and are free to use it in your developments: http://jsonplaceholder.typicode.com. 
 
-I hope some of you will find it useful.
+I hope you will find it useful.
 
 
 Features
