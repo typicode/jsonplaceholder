@@ -160,8 +160,7 @@ Here's the list of available nested routes:
 - http://jsonplaceholder.typicode.com/posts/1/comments
 - http://jsonplaceholder.typicode.com/albums/1/photos
 - http://jsonplaceholder.typicode.com/users/1/albums
-- http://jsonplaceholder.typicode.com/users/1/photos
-- http://jsonplaceholder.typicode.com/users/1/tasks
+- http://jsonplaceholder.typicode.com/users/1/todos
 - http://jsonplaceholder.typicode.com/users/1/posts
 
 ### JSONP request
