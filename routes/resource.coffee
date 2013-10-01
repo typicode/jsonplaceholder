@@ -1,14 +1,15 @@
+_  = require 'underscore'
 db = require('../database/db')
 
 exports.list = (req, res) ->
-  page = req.query.page
   collection = db[req.params.resource]
-  if page
-    begin = (page - 1) * 5
-    end = begin + 5
-    res.jsonp collection.slice begin, end
-  else
+  properties = {}
+  for key, value of req.query
+    properties[key] = if _(+value).isNaN() then value else +value
+  if _(properties).isEmpty()
     res.jsonp collection
+  else
+    res.jsonp collection.where properties
 
 exports.nestedList = (req, res) ->
   properties = {}
