@@ -61,7 +61,7 @@ $.ajax('http://jsonplaceholder.typicode.com/posts', {
 ### Showing a resource
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts', {
+$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
   method: 'GET'
 }).then(function(data) {
   console.log(data);
