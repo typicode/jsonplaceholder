@@ -1,22 +1,50 @@
 <html>
   <head>
-    <title>JSONPlaceholder</title>
+    <meta charset="utf-8">
+    <title>JSONPlaceholder - Fake online REST API for testing and prototyping</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/jumbotron-narrow.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-      body { text-align: center }
-      p { margin-top: 64px }
-    </style>
   </head>
   <body>
     <div class="container">
-      <h1>JSONPlaceholder</h1>
-      <h2>A simple fake online REST API for testing and prototyping</h2>
-      <p>
-        <a href="http://github.com/typicode/jsonplaceholder" class="btn btn-primary btn-lg">
-          <i class="icon-github"></i> View documentation on GitHub
-        </a>
-      </p>
+      <div class="header">
+        <h3 class="text-muted">JSONPlaceholder</h3>
+      </div>
+      <div class="jumbotron">
+        <p class="lead">JSONPlaceholder is a simple fake online REST API for testing and prototyping.</p>
+        <p>
+          <a href="http://github.com/typicode/jsonplaceholder" class="btn btn-primary btn-lg">
+            <i class="icon-github"></i> View documentation on GitHub »
+          </a>
+        </p>
+      </div>
+      <div>
+        <h4>Available resources</h4>
+        <ul>
+          <li><a href="/posts">/posts</a></li>
+          <li><a href="/comments">/comments</a></li>
+          <li><a href="/albums">/albums</a></li>
+          <li><a href="/photos">/photos</a></li>
+          <li><a href="/todos">/todos</a></li>
+          <li><a href="/users">/users</a></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <p>
+          Powered by <a href="http://nodejs.com">Node</a>,
+          <a href="http://expressjs.com/">Express</a>, 
+          <a href="https://github.com/marak/Faker.js/">Faker</a>
+          and <a href="http://backbonejs.com">Backbone</a>.
+        </p>
+        <p>
+          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+          <iframe src="http://ghbtns.com/github-btn.html?user=typicode&repo=jsonplaceholder&type=watch&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        </p>
+      </div>
     </div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

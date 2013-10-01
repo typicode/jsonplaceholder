@@ -1,7 +1,7 @@
 JSONPlaceholder
 ===============
 
-JSONPlaceholder is simple fake online REST API for testing and prototyping.
+JSONPlaceholder is a simple fake online REST API for testing and prototyping.
 
 It's like [image placeholders](http://placehold.it/) but for web developers.
 
