@@ -48,20 +48,20 @@ Code samples
 Here's some code using jQuery showing what can be done with JSONPlaceholder. 
 Since GitHub loads jQuery, you can simply copy and paste these examples in a console.
 
-### Listing resources
+### Showing a resource
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts', {
+$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
   method: 'GET'
 }).then(function(data) {
   console.log(data);
 });
 ```
 
-### Showing a resource
+### Listing resources
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
+$.ajax('http://jsonplaceholder.typicode.com/posts', {
   method: 'GET'
 }).then(function(data) {
   console.log(data);
