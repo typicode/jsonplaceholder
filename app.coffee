@@ -27,7 +27,7 @@ app.use app.router
 app.use express.errorHandler() if 'development' is app.get('env')
                              
 app.get    '/:resource', resource.list                         
-app.get    '/:parent/:parent_id/:resource', resource.nestedList
+app.get    '/:parent/:parentId/:resource', resource.nestedList
 app.get    '/:resource/:id', resource.show                     
 app.post   '/:resource', resource.create                       
 app.put    '/:resource', resource.update                       

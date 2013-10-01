@@ -12,7 +12,7 @@ exports.list = (req, res) ->
 
 exports.nestedList = (req, res) ->
   properties = {}
-  properties["#{req.params.parent}_id"] = req.params.parend_id
+  properties["#{req.params.parent}Id"] = req.params.parendId
   db[req.params.resource].where properties
 
 exports.show = (req, res) ->

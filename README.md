@@ -85,7 +85,7 @@ $.ajax('http://jsonplaceholder.typicode.com/posts', {
 
 /* will return
 {
-  id: 134985902,
+  id: 134985902, // Random id
   title: 'foo',
   body: 'bar',
   userId: 1
