@@ -3,31 +3,32 @@ JSONPlaceholder
 
 JSONPlaceholder is a simple fake online REST API for testing and prototyping.
 
-It's like [image placeholders](http://placehold.it/) but for web developers.
+It's like an [image placeholder](http://placehold.it/) but for web developers.
 
 
 Why?
 ----
 
-Many times when trying a new library, hacking a prototype or following a tutorial, I found myself in need of some data.
-I could either use a public API or hard code some data but:
-- Public APIs need registration and are often too much for basic prototyping
-- Hard coding data is boring and doesn't have real latency
+Most of the time when trying a new library, hacking a prototype or following a tutorial, I found myself in need of some data.
+I didn't like the idea of using a public APIs because I had the feeling that I was spending more time registering a client and understanding a complex API rather than focusing on my task.
 
-So here is JSONPlaceholder, I hope you'll find it useful.
+But I liked the idea of image placeholders for web designers. So I decided to code a little Express server and here is JSONPlaceholder.
 
-You can find it running here: http://jsonplaceholder.typicode.com feel free to use it.
+You can find it running here and are free to use it: http://jsonplaceholder.typicode.com. 
+
+I hope some of you will find it useful.
+
 
 Features
 --------
 
-- Registration free
-- Least surprise API
-- Has many relationships
+- No registration
+- Basic API
+- "Has many" relationships
 - Filters and nested resources
 - Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
 - Supports GET, POST, PUT and DELETE verbs
-- Compatible with Backbone, Ember, AngularJS, ...
+- Compatible with Backbone, AngularJS, Ember, ...
 
 Available resources
 -------------------
@@ -44,7 +45,7 @@ Code samples
 ------------
 
 Here's some code using jQuery showing what can be done with JSONPlaceholder. 
-If jQuery is load you can simply copy and paste these codes in a console.
+If jQuery is loaded you can simply copy and paste these examples in a console.
 
 ### Listing resources
 
