@@ -12,7 +12,7 @@ seed.run()
 app      = express()
 
 # all environments
-app.set 'port', process.env.PORT or 3000
+app.set 'port', process.env.PORT or 4000
 app.set 'views', __dirname + '/views'
 app.set 'view engine', 'jade'
 app.use express.favicon()
@@ -34,5 +34,5 @@ app.put    '/:resource', cors(), resource.update
 app.delete '/:resource', cors(), resource.destroy                      
 
 http.createServer(app).listen app.get('port'), ->
-  console.log 'Express server listening on port ' + app.get('port')
+  console.log 'Express JSONPlaceholder server listening on port ' + app.get('port')
 

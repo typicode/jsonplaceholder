@@ -1,17 +1,22 @@
 {
   "name": "jsonplaceholder",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
-    "start": "coffee app.coffee"
+    "start": "coffee app.coffee",
+    "prepublish": {
+      "coffee -o lib/ -c src/"
+    }
+  },
+  "bin": "./cli.js",
+  "devDependencies": {
+    "coffee-script": "*"    
   },
   "dependencies": {
     "express": "3.2.6",
     "cors": "1.0.1",
     "backbone": "1.0.0",
     "underscore": "1.4.4",
-    "Faker": "0.5.7",
-    "coffee-script": "*"
+    "Faker": "0.5.7"
   },
   "engines": {
     "node": "0.10.x",
