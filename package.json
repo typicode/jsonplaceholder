@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "coffee app.coffee",
-    "prepublish": {
-      "coffee -o lib/ -c src/"
-    }
+    "prepublish": "coffee -o lib/ -c src/"
   },
   "bin": "./cli.js",
   "devDependencies": {
