@@ -31,5 +31,5 @@ app.put    '/:resource', cors(), resource.update
 app.delete '/:resource', cors(), resource.destroy                      
 
 http.createServer(app).listen app.get('port'), ->
-  console.log 'Express JSONPlaceholder server listening on port ' + app.get('port')
+  console.log 'JSONPlaceholder server listening on port ' + app.get('port')
 
