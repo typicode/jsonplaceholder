@@ -29,24 +29,24 @@ I hope you will find it useful.
 Features
 --------
 
-- No registration
-- Basic API
-- "Has many" relationships
-- Filters and nested resources
-- Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
-- Supports GET, POST, PUT and DELETE verbs
-- Compatible with Backbone, AngularJS, Ember, ...
+* No registration
+* Basic API
+* "Has many" relationships
+* Filters and nested resources
+* Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
+* Supports GET, POST, PUT and DELETE verbs
+* Compatible with Backbone, AngularJS, Ember, ...
 
 Available resources
 -------------------
 
 Let's start with resources, JSONPlaceholder provides the usual suspects: 
-- Posts http://jsonplaceholder.typicode.com/posts/1
-- Comments http://jsonplaceholder.typicode.com/comments/1
-- Albums http://jsonplaceholder.typicode.com/albums/1
-- Photos http://jsonplaceholder.typicode.com/photos/1
-- Users http://jsonplaceholder.typicode.com/users/1
-- Todos http://jsonplaceholder.typicode.com/todos/1
+* Posts http://jsonplaceholder.typicode.com/posts/1
+* Comments http://jsonplaceholder.typicode.com/comments/1
+* Albums http://jsonplaceholder.typicode.com/albums/1
+* Photos http://jsonplaceholder.typicode.com/photos/1
+* Users http://jsonplaceholder.typicode.com/users/1
+* Todos http://jsonplaceholder.typicode.com/todos/1
 
 Code samples
 ------------
@@ -163,11 +163,11 @@ $.ajax('http://jsonplaceholder.typicode.com/posts/1/comments').then(function(dat
 ```
 
 Here's the list of available nested routes:
-- http://jsonplaceholder.typicode.com/posts/1/comments
-- http://jsonplaceholder.typicode.com/albums/1/photos
-- http://jsonplaceholder.typicode.com/users/1/albums
-- http://jsonplaceholder.typicode.com/users/1/todos
-- http://jsonplaceholder.typicode.com/users/1/posts
+* http://jsonplaceholder.typicode.com/posts/1/comments
+* http://jsonplaceholder.typicode.com/albums/1/photos
+* http://jsonplaceholder.typicode.com/users/1/albums
+* http://jsonplaceholder.typicode.com/users/1/todos
+* http://jsonplaceholder.typicode.com/users/1/posts
 
 ### JSONP request
 
