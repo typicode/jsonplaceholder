@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "a simple fake REST API server for testing and prototyping",
   "keywords": ["fake", "JSON", "server", "REST"],
+  "homepage": "http://jsonplaceholder.typicode.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/typicode/jsonplaceholder.git"
