@@ -5,8 +5,8 @@ JSONPlaceholder is a simple fake online REST API for testing and prototyping.
 It's like an [image placeholder](http://placehold.it/) but for web developers.
 
 
-Why?
-----
+## Why?
+
 
 Most of the time when trying a new library, hacking a prototype or following a tutorial, I found myself in need of some data.
 
@@ -26,8 +26,7 @@ $ jsonplaceholder
 I hope you will find it useful.
 
 
-Features
---------
+## Features
 
 * No registration
 * Basic API
@@ -37,10 +36,10 @@ Features
 * Supports GET, POST, PUT and DELETE verbs
 * Compatible with Backbone, AngularJS, Ember, ...
 
-Available resources
--------------------
+## Available resources
 
-Let's start with resources, JSONPlaceholder provides the usual suspects: 
+Let's start with resources, JSONPlaceholder provides the usual suspects:
+
 * Posts http://jsonplaceholder.typicode.com/posts/1
 * Comments http://jsonplaceholder.typicode.com/comments/1
 * Albums http://jsonplaceholder.typicode.com/albums/1
@@ -48,8 +47,7 @@ Let's start with resources, JSONPlaceholder provides the usual suspects:
 * Users http://jsonplaceholder.typicode.com/users/1
 * Todos http://jsonplaceholder.typicode.com/todos/1
 
-Code samples
-------------
+## Code samples
 
 Here's some code using jQuery showing what can be done with JSONPlaceholder. 
 Since GitHub loads jQuery, you can simply copy and paste these examples in a console.
@@ -163,6 +161,7 @@ $.ajax('http://jsonplaceholder.typicode.com/posts/1/comments').then(function(dat
 ```
 
 Here's the list of available nested routes:
+
 * http://jsonplaceholder.typicode.com/posts/1/comments
 * http://jsonplaceholder.typicode.com/albums/1/photos
 * http://jsonplaceholder.typicode.com/users/1/albums
