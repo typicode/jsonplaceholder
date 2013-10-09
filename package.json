@@ -9,7 +9,7 @@
     "url": "https://github.com/typicode/jsonplaceholder.git"
   },
   "scripts": {
-    "start": "coffee app.coffee",
+    "start": "coffee src/app.coffee",
     "prepublish": "coffee -o lib/ -c src/"
   },
   "bin": "./cli.js",
