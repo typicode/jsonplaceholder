@@ -1,2 +1,2 @@
 lib
-# Not ignoring node_modules since deploying on Heroku
+node_modules
