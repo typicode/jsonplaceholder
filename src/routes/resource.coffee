@@ -27,4 +27,4 @@ exports.update = (req, res) ->
   res.jsonp req.body
 
 exports.destroy = (req, res) ->
-  res.status 200
+  res.status 204

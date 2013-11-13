@@ -128,7 +128,7 @@ Note: the resource will not be really updated on the server but it will be faked
 ### Deleting a resource
 
 ```javascript
-// DELETE returns a 200 status only
+// DELETE returns a 204 status only
 $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
   method: 'DELETE'
 });
