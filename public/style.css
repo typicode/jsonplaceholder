@@ -1,0 +1,49 @@
+body {
+  margin-bottom: 60px !important;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+
+.navbar-default {
+  background-color: #2d363f;
+}
+
+.navbar-header {
+  float: none;
+}
+
+.navbar-brand {
+  float: none;
+  display: block;
+  text-align: center;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.jumbotron {
+  float: none;
+  display: block;
+  text-align: center;
+  background-color: rgb(248, 248, 248);
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.social-buttons {
+  text-align: center;
+}
+
+.narrow {
+  max-width: 640px;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
