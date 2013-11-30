@@ -45,7 +45,7 @@ Let's start with resources, JSONPlaceholder provides the usual suspects:
 * Users http://jsonplaceholder.typicode.com/users/1
 * Todos http://jsonplaceholder.typicode.com/todos/1
 
-## Code samples
+## How to
 
 Here's some code using jQuery showing what can be done with JSONPlaceholder. 
 Since GitHub loads jQuery, you can simply copy and paste these examples in a console.
@@ -175,4 +175,3 @@ $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
   console.log(data);
 });
 ```
-

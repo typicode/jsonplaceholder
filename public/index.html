@@ -2,64 +2,110 @@
   <head>
     <meta charset="utf-8">
     <title>JSONPlaceholder - A fake online REST API for testing and prototyping</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/jumbotron-narrow.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <h3 class="text-muted">JSONPlaceholder</h3>
+
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <span class="navbar-brand">JSONPlaceholder</span>
+        </div>
       </div>
+    </div>
+
+    <div class="container narrow">
       <div class="jumbotron">
         <p class="lead">
-          JSONPlaceholder is a simple fake online REST API for testing and prototyping.<br>
+          JSONPlaceholder is a simple fake online REST API for testing and prototyping.
+        </p>
+        <p>
           It's like an image placeholder but for web developers.
         </p>
         <p>
-          <a href="http://github.com/typicode/jsonplaceholder" class="btn btn-success btn-lg">
-            <i class="icon-github"></i> Read documentation on GitHub »
+          <a href="http://github.com/typicode/jsonplaceholder" class="btn btn-info btn-lg">
+            <i class="icon-github"></i> Read documentation »
           </a>
         </p>
-        <p class="buttons">
-          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+      
+      <p class="social-buttons">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jsonplaceholder.typicode.com">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-          <iframe src="http://ghbtns.com/github-btn.html?user=typicode&repo=jsonplaceholder&type=watch&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-        </p>
-      </div>
-      <div>
-        <h4>Use it online...</h4>
-        <ul>
-          <li><a href="/posts">./posts</a></li>
-          <li><a href="/comments">./comments</a></li>
-          <li><a href="/albums">./albums</a></li>
-          <li><a href="/photos">./photos</a></li>
-          <li><a href="/todos">./todos</a></li>
-          <li><a href="/users">./users</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>... or run it locally</h4>
-        <p>
-          <pre>
+        <iframe src="http://ghbtns.com/github-btn.html?user=typicode&repo=jsonplaceholder&type=watch&count=true"
+allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+
+        <a href="https://twitter.com/typicode" class="twitter-follow-button" data-show-count="false">Follow @typicode</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </p>
+
+
+      <hr>
+
+      <h2>API</h2>
+
+      <p>
+        <blockquote>
+          Whether you're testing a new framework, following a tutorial, ...
+          feel free to use JSONPlaceholder API if you need some dummy data.
+        </blockquote>
+      </p>
+
+      <p>
+        API can be accessed from your development environment through CORS or JSONP.
+      </p>
+
+      <p>
+        GET, POST, PUT, PATCH and DELETE requests are supported.
+      </p>
+
+      <p>
+        Here is the list of available resources.
+      </p>
+
+      <ul>
+        <li><a href="/posts">http://jsonplaceholder.typicode.com/posts</a></li>
+        <li><a href="/comments">http://jsonplaceholder.typicode.com/comments</a></li>
+        <li><a href="/albums">http://jsonplaceholder.typicode.com/albums</a></li>
+        <li><a href="/photos">http://jsonplaceholder.typicode.com/photos</a></li>
+        <li><a href="/todos">http://jsonplaceholder.typicode.com/todos</a></li>
+        <li><a href="/users">http://jsonplaceholder.typicode.com/users</a></li>
+      </ul>
+
+      <p>
+        They were inspired by common use cases and have simple structures.
+      </p>
+      <p>
+        For usage information, have a look at the project <a href="http://github.com/typicode/jsonplaceholder">README</a>.
+      </p>
+
+      <h2>Run it locally</h2>
+    
+      <p>
+        If for some reasons, you prefer to use JSONPlaceholder locally, you can do so.
+      </p>
+
+      <p>
+        <pre>
 $ npm install -g jsonplaceholder
 $ jsonplaceholder</pre>
-        </p>
-      </div>
-      <div class="footer">
-        <p>
-          Powered by <a href="http://nodejs.com">Node</a>,
-          <a href="http://expressjs.com/">Express</a>, 
-          <a href="https://github.com/marak/Faker.js/">Faker</a>,
-          <a href="https://github.com/troygoode/node-cors/">CORS</a>
-          and <a href="http://backbonejs.com">Backbone</a>.
-        </p>
-        <p>
+      </p>
 
-        </p>
-      </div>
+      <h2>Use your own data</h2>
+
+      <p>
+        JSONPlaceholder provides a set of default resources, but maybe they don't suit
+        your needs.
+      <p>
+
+      <p>
+        In this case, use <a href="https://github.com/typicode/json-server">JSON Server</a>, which actually powers JSONPlaceholder.<br>
+        It will let you have a similar custom fake API in no time.
+      </p>
+
     </div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
