@@ -106,7 +106,7 @@ Note: the resource will not be really created on the server but it will be faked
 $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
   method: 'PUT',
   data: {
-    id: 1
+    id: 1,
     title: 'foo',
     body: 'bar',
     userId: 1
