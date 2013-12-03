@@ -3,4 +3,4 @@ var server = require('json-server'),
 
 var db = seed.run();
 
-server.run(db, { mode: 'read-only' });
+server.run(db, { readOnly: true });
