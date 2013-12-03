@@ -1,27 +1,6 @@
 body {
+  margin-top: 30px;
   margin-bottom: 60px !important;
-}
-
-.navbar {
-  margin-bottom: 30px;
-}
-
-.navbar-default {
-  background-color: #2d363f;
-}
-
-.navbar-header {
-  float: none;
-}
-
-.navbar-brand {
-  float: none;
-  display: block;
-  text-align: center;
-}
-
-.navbar-brand {
-  color: white !important;
 }
 
 .jumbotron {
