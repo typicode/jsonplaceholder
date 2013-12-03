@@ -1,8 +1,10 @@
 # JSONPlaceholder
 
-JSONPlaceholder is a simple fake REST API for testing and prototyping.
+[JSONPlaceholder](http://jsonplaceholder.typicode.com) is a simple fake REST API for testing and prototyping.
 
 It's like an [image placeholder](http://placehold.it/) but for web developers.
+
+_JSONPlaceholder is powered by [JSON Server](https://github.com/typicode/json-server)._
 
 ## Why?
 
