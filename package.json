@@ -20,8 +20,8 @@
   },
   "bin": "./cli.js",
   "dependencies": {
-    "json-server": "*",
     "Faker": "~0.5.11",
+    "json-server": "^0.3.3",
     "rosie": "~0.2.0",
     "underscore": "~1.5.2"
   },
