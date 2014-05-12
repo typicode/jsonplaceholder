@@ -7,9 +7,7 @@ function reset() {
 }
 
 server.low.autoSave = false
-server.low.on('update', reset)
-server.low.on('remove', reset)
-server.low.on('add', reset)
+server.low.on('change', reset)
 
 server.listen(port, function() {
   console.log('JSONPlaceholder listening on http://localhost:' + port)
