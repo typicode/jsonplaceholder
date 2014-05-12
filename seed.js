@@ -1,3 +1,4 @@
+// Run this to generate data.json
 var fs      = require('fs')
 var _       = require('underscore')
 var Factory = require('rosie').Factory
