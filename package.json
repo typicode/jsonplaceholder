@@ -1,6 +1,6 @@
 {
   "name": "jsonplaceholder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple fake REST API server for testing and prototyping.",
   "keywords": [
     "fake",
@@ -21,7 +21,7 @@
   "bin": "./cli.js",
   "dependencies": {
     "Faker": "~0.5.11",
-    "json-server": "^0.3.5",
+    "json-server": "^0.3.6",
     "rosie": "~0.2.0",
     "underscore": "~1.5.2"
   },
