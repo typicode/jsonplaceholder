@@ -33,7 +33,7 @@ I hope you will find it useful.
 * "Has many" relationships
 * Filters and nested resources
 * Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
-* Supports GET, POST, PUT and DELETE verbs
+* Supports GET, POST, PUT, PATCH, DELETE and OPTIONS verbs
 * Compatible with Backbone, AngularJS, Ember, ...
 
 ## Available resources
@@ -102,7 +102,6 @@ Note: the resource will not be really created on the server but it will be faked
 ### Updating a resource
 
 ```javascript
-// PUT returns the object sent
 $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
   method: 'PUT',
   data: {
@@ -120,6 +119,26 @@ $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
   id: 1
   title: 'foo',
   body: 'bar',
+  userId: 1
+}
+*/
+```
+
+```javascript
+$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PATCH',
+  data: {
+    title: 'foo'
+  }
+}).then(function(data) {
+  console.log(data);
+});
+
+/* will return
+{
+  id: 1
+  title: 'foo',
+  body: 'quia et suscipit [...]',
   userId: 1
 }
 */
