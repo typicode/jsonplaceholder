@@ -20,7 +20,7 @@
   },
   "bin": "./cli.js",
   "dependencies": {
-    "json-server": "^0.5.11"
+    "json-server": "^0.5.12"
   },
   "devDependencies": {
     "Faker": "~0.5.11",
