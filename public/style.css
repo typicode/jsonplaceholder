@@ -1,17 +1,70 @@
 body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #2C3E50;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.narrow {
   max-width: 600px;
   margin: 0 auto;
   padding: 1%;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.center {
+  text-align: center
+}
+
+.inline {
+  display: inline-block;
+}
+
+.fb-like{
+  position:relative;
+  top:-10px;
+}
+
+header {
+  color: #333;
+  text-align: center;
+  padding: 1%;
+  font-weight: 100;
+  font-size: 24px;
+  letter-spacing: .1em;
+  border-bottom: 1px solid #CCC;
+}
+
+p {
+  font-weight: normal;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #CCC;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: inherit;
+  letter-spacing: .2em;
 }
 
 a {
-  color: #333;
+  text-decoration: none;
+  color: #1882BC;
+}
+
+a:hover {
+  text-decoration: underline  ;
 }
 
 pre, #result {
-  font-family: monospace;
-  font-size: 1.1em;
+  font-size: 16px;
+}
+
+code {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #result {
@@ -20,6 +73,10 @@ pre, #result {
   -ms-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto;
+}
+
+code, #result {
+  padding: 20px !important
 }
 
 ul {
@@ -31,6 +88,24 @@ li {
   list-style: none
 }
 
+p {
+  line-height: 1.6em
+}
+
+td.verb {
+  font-weight: bold;
+  width: 90px;
+}
+
 #os-x {
-  background: #EEE;
+  display: none;
+  background: rgb(103, 0, 255);
+  color: white;
+  font-weight: 200;
+  padding: 10px;
+}
+
+#os-x a {
+  color: white;
+  text-decoration: underline;
 }
