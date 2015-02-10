@@ -17,50 +17,54 @@
   <body>
 
     <header>
-      <!-- Twitter button -->
-      <div class="inline">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      </div>
-
-      <!-- Google plus -->
-      <div class="inline">
-        <div class="g-plusone" data-size="medium"></div>
-      </div>
-
-      <!-- Facebook -->
-      <div class="inline">
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-
-        <div class="fb-like" data-href="http://jsonplaceholder.typicode.com/" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="false"></div>
-      </div>
-
-      <h1>JSONPlaceholder<br>{:}</h1>
+      <h1><img src="http://i.imgur.com/QRlAg0b.png"><br>JSONPlaceholder </h1>
 
       <p>
-        Online Fake REST API for Developers
-      </p>
-
-      <p>
+        Fake Online REST API for Testing and Prototyping<br>
         <small>powered by <a href="https://github.com/typicode/json-server">JSON Server</a></small>
       </p>
     </header>
 
     <div class="narrow">
-      <h2>What?</h2>
+      <div class="center">
+        <!-- Twitter button -->
+        <div class="inline">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
 
-      <p>JSONPlaceholder is a free online REST service you can use whenever you need some fake data.</p>
+        <!-- Google plus -->
+        <div class="inline">
+          <div class="g-plusone" data-size="medium"></div>
+        </div>
+
+        <!-- Facebook -->
+        <div class="inline">
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+
+          <div class="fb-like" data-href="http://jsonplaceholder.typicode.com/" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="false"></div>
+        </div>
+      </div>
+      <h2>Intro</h2>
+
+      <p>
+        JSONPlaceholder is a free online REST service that you can use whenever you need some fake data.
+      </p>
+
+      <p>
+        It's great for tutorials, faking a server, sharing code examples, ...
+      </p>
 
       <h2>Example</h2>
 
-      <p>Run this code in a console or from anywhere (CORS and JSONP supported)</p>
+      <p>Run this code in a console or from anywhere (CORS and JSONP supported).</p>
 
       <pre><code class="javascript">var root = 'http://jsonplaceholder.typicode.com';
 
@@ -75,12 +79,12 @@ $.ajax({
         <button id="run">Run</button>
       </p>
 
-      <p id="result" class="json"></p>
+      <p id="result" class="json">"Try me!"</p>
 
       <h2>Resources</h2>
 
       <p>
-        Here are all the available resources. Inspired by common use-cases.
+        Inspired by common use cases.
       </p>
 
       <table>
@@ -95,7 +99,7 @@ $.ajax({
       <h2>Routes</h2>
 
       <p>
-        All verbs are supported
+        All HTTP verbs are supported.
       </p>
 
       <table>
@@ -111,10 +115,10 @@ $.ajax({
       </table>
 
       <p>
-        View usage <a href="https://github.com/typicode/jsonplaceholder">examples</a>.
+        View usage <a href="https://github.com/typicode/jsonplaceholder#how-to">examples</a>.
       </p>
 
-      <h2>Use it with YOUR own DATA</h2>
+      <h2>Use your OWN data</h2>
 
       <p>
         <a href="https://github.com/typicode/json-server">JSON Server</a> powers this website.
@@ -134,6 +138,7 @@ $.ajax({
     <footer>
       <p>
         Coded and built with heart by <a href="https://github.com/typicode">Typicode</a>.
+        Source code available on <a href="https://github.com/typicode/jsonplacehoder">GitHub</a>.
       </p>
     </footer>
 

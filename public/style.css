@@ -22,17 +22,22 @@ body {
 
 .fb-like{
   position:relative;
-  top:-10px;
+  top:-6px;
 }
 
 header {
   color: #333;
   text-align: center;
-  padding: 1%;
-  font-weight: 100;
+  padding: 40px 1% 40px 1%;
   font-size: 24px;
-  letter-spacing: .1em;
   border-bottom: 1px solid #CCC;
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: #2C3E50;
+  letter-spacing: .1em;
+  margin-bottom: 50px;
 }
 
 p {
@@ -44,10 +49,8 @@ footer {
   border-top: 1px solid #CCC;
 }
 
-h1 {
-  font-size: 64px;
-  font-weight: inherit;
-  letter-spacing: .2em;
+h2 {
+  margin-top: 40px;
 }
 
 a {
@@ -76,7 +79,7 @@ code {
 }
 
 code, #result {
-  padding: 20px !important
+  padding: 20px !important;
 }
 
 ul {
@@ -108,4 +111,18 @@ td.verb {
 #os-x a {
   color: white;
   text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  header {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  code, #result {
+    padding: 1% !important;
+  }
 }
