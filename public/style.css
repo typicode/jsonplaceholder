@@ -80,6 +80,7 @@ code {
 
 code, #result {
   padding: 20px !important;
+  border-radius: 2px;
 }
 
 ul {
