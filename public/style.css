@@ -30,7 +30,7 @@ header {
   text-align: center;
   padding: 40px 1% 40px 1%;
   font-size: 24px;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #DDD;
   margin-bottom: 40px;
 }
 
@@ -46,7 +46,7 @@ p {
 
 footer {
   text-align: center;
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #DDD;
 }
 
 h2 {
@@ -59,7 +59,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline  ;
+  text-decoration: underline;
 }
 
 pre, #result {
@@ -101,17 +101,22 @@ td.verb {
   width: 90px;
 }
 
-#os-x {
-  display: none;
-  background: rgb(103, 0, 255);
-  color: white;
-  font-weight: 200;
-  padding: 10px;
+a.more {
+  text-decoration: none;
 }
 
-#os-x a {
-  color: white;
-  text-decoration: underline;
+.more {
+  display: none;
+  border: 1px dashed #D9DDB3;
+  font-weight: 200;
+  margin: 30px 0 15px 0;
+  padding: 10px;
+  background-color: #FDFFE9;
+  color: #3F4134;
+}
+
+.more p {
+  margin: 0;
 }
 
 @media (max-width: 700px) {

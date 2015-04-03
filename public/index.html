@@ -126,14 +126,20 @@ $.ajax({
         You can use it to create a <strong>fake API</strong> in seconds with <strong>zero coding</strong>.
       </p>
 
-      <pre>
-        <code class="bash">$ npm install -g json-server</code>
-      </pre>
+      <pre><code class="bash">$ npm install -g json-server</code></pre>
 
-      <p id="os-x">
-        Hey, you seem to be on OS X. Check also <a href="https://github.com/typicode/katon">katon</a>,
-        a development tool I've built.
-      </p>
+      <a href="https://github.com/typicode/katon" class="more" id="katon">
+        <p>
+          See also katon, a better way to work with dev servers on OS X.
+        </p>
+      </a>
+
+      <a href="http://typicode.github.io/pegasus/" class="more" id="pegasus">
+        <p>
+          See also Pegasus, a JS library that lets you load data while still loading other scripts.
+        </p>
+      </a>
+
     </div>
 
     <footer>
@@ -183,7 +189,9 @@ $.ajax({
       // Display os-x element only for OS X users
       var isMac = navigator.platform.toLowerCase().indexOf('mac') >= 0;
       if (isMac) {
-        document.getElementById('os-x').style.display = 'block'
+        document.getElementById('katon').style.display = 'block'
+      } else {
+        document.getElementById('pegasus').style.display = 'block'
       }
 
       // Tell that jQuery can be used in console
