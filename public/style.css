@@ -109,10 +109,11 @@ a.more {
   display: none;
   border: 1px dashed #D9DDB3;
   font-weight: 200;
-  margin: 30px 0 15px 0;
+  margin-top: 40px;
   padding: 10px;
   background-color: #FDFFE9;
   color: #3F4134;
+  font-size: 18px;
 }
 
 .more p {

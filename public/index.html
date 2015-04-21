@@ -10,6 +10,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Google plus -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -21,7 +22,10 @@
 
       <p>
         Fake Online REST API for Testing and Prototyping<br>
-        <small>powered by <a href="https://github.com/typicode/json-server">JSON Server</a></small>
+        <small>
+          powered by <a href="https://github.com/typicode/json-server">JSON Server</a>
+          and <a href="https://github.com/typicode/lowdb">lowdb</a>
+        </small>
       </p>
     </header>
 
@@ -123,28 +127,33 @@ $.ajax({
 
       <p>
         <a href="https://github.com/typicode/json-server">JSON Server</a> powers this website.
-        You can use it to create a <strong>fake API</strong> in seconds with <strong>zero coding</strong>.
+        You can use it to create the same fake API in less than <strong>30 seconds</strong> with your own data.
       </p>
 
       <pre><code class="bash">$ npm install -g json-server</code></pre>
 
       <a href="https://github.com/typicode/katon" class="more" id="katon">
         <p>
-          See also katon, a better way to work with dev servers on OS X.
+          Would you like to have your local dev servers automatically started? See also <u>katon</u>.
         </p>
       </a>
 
       <a href="http://typicode.github.io/pegasus/" class="more" id="pegasus">
         <p>
-          See also Pegasus, a JS library that lets you load data while still loading other scripts.
+          See also <u>Pegasus</u>, a front-end library that lets you load JSON while still loading other scripts.
         </p>
       </a>
 
+      <a href="http://typicode.github.io/pegasus/" class="more" id="husky">
+        <p>
+          Do you sometimes forget to run tests before a git commit or push? See also <u>husky</u>.
+        </p>
+      </a>
     </div>
 
     <footer>
       <p>
-        Coded and built with heart by <a href="https://github.com/typicode">Typicode</a>.
+        Coded and built with <i class="fa fa-heart"></i> by <a href="https://github.com/typicode">typicode</a>.
         Source code available on <a href="https://github.com/typicode/jsonplaceholder">GitHub</a>.
       </p>
     </footer>
@@ -188,10 +197,11 @@ $.ajax({
 
       // Display os-x element only for OS X users
       var isMac = navigator.platform.toLowerCase().indexOf('mac') >= 0;
-      if (isMac) {
+      if (true) {
         document.getElementById('katon').style.display = 'block'
       } else {
-        document.getElementById('pegasus').style.display = 'block'
+        var id = ['pegasus', 'husky'][Math.round(Math.random(1))]
+        document.getElementById(id).style.display = 'block'
       }
 
       // Tell that jQuery can be used in console
