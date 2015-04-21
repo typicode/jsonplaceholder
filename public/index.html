@@ -134,7 +134,7 @@ $.ajax({
 
       <a href="https://github.com/typicode/katon" class="more" id="katon">
         <p>
-          Want to have your local dev servers automatically started? See also <u>katon</u>.
+          Want to have your local dev servers automatically started? See <u>katon</u>.
         </p>
       </a>
 
@@ -146,7 +146,7 @@ $.ajax({
 
       <a href="http://typicode.github.io/pegasus/" class="more" id="husky">
         <p>
-          Do you sometimes forget to run tests before a git commit or push? See also <u>husky</u>.
+          Do you sometimes forget to run tests before a git commit or push? See <u>husky</u>.
         </p>
       </a>
     </div>
@@ -197,7 +197,7 @@ $.ajax({
 
       // Display os-x element only for OS X users
       var isMac = navigator.platform.toLowerCase().indexOf('mac') >= 0;
-      if (true) {
+      if (isMac) {
         document.getElementById('katon').style.display = 'block'
       } else {
         var id = ['pegasus', 'husky'][Math.round(Math.random(1))]
