@@ -96,9 +96,23 @@ p {
   line-height: 1.6em
 }
 
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 320px;
+}
+
+td:first-child {
+  width: 120px;
+}
+
+td {
+  border-top: 1px solid #EEE;
+  padding: 5px
+}
+
 td.verb {
   font-weight: bold;
-  width: 90px;
 }
 
 a.more {
