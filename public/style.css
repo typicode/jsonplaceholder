@@ -107,7 +107,7 @@ a.more {
 
 .more {
   display: none;
-  border: 1px dashed #D9DDB3;
+  border: 1px solid #E3ED88;
   font-weight: 200;
   margin-top: 40px;
   padding: 10px;

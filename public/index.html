@@ -134,19 +134,19 @@ $.ajax({
 
       <a href="https://github.com/typicode/katon" class="more" id="katon">
         <p>
-          Want to have your local dev servers automatically started? See <u>katon</u>.
+          You seem to be on OS X, see also <u>katon</u>, another dev utility.
         </p>
       </a>
 
       <a href="http://typicode.github.io/pegasus/" class="more" id="pegasus">
         <p>
-          See also <u>Pegasus</u>, a front-end library that lets you load JSON while still loading other scripts.
+          Check also <u>Pegasus</u>, a front-end library that lets you load JSON while still loading other scripts.
         </p>
       </a>
 
-      <a href="http://typicode.github.io/pegasus/" class="more" id="husky">
+      <a href="https://github.com/typicode/husky" class="more" id="husky">
         <p>
-          Do you sometimes forget to run tests before a git commit or push? See <u>husky</u>.
+          Do you sometimes forget to run tests before a git commit or push?
         </p>
       </a>
     </div>
@@ -197,12 +197,10 @@ $.ajax({
 
       // Display os-x element only for OS X users
       var isMac = navigator.platform.toLowerCase().indexOf('mac') >= 0;
-      if (isMac) {
-        document.getElementById('katon').style.display = 'block'
-      } else {
-        var id = ['pegasus', 'husky'][Math.round(Math.random(1))]
-        document.getElementById(id).style.display = 'block'
-      }
+      var arr = ['pegasus', 'husky']
+      if (isMac) arr.push('katon')
+      var id = arr[Math.round(Math.random(1))]
+      document.getElementById(id).style.display = 'block'
 
       // Tell that jQuery can be used in console
       console.log('You can use jQuery functions')
