@@ -129,12 +129,11 @@ a.more {
 
 .more {
   display: none;
-  border: 1px solid #E3ED88;
   font-weight: 200;
-  margin-top: 40px;
+  margin: 40px 0 30px 0;
   padding: 10px;
-  background-color: #FDFFE9;
-  color: #3F4134;
+  background-color: #00AE77;
+  color: white;
   font-size: 18px;
 }
 

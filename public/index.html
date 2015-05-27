@@ -6,7 +6,7 @@
     <meta name="description" content="Fake online REST API for developers">
     <meta name="author" content="Typicode">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/mono-blue.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -120,8 +120,6 @@ $.ajax({
         </tr>
       </table>
 
-
-
       <h2>Use your OWN data</h2>
 
       <p>
@@ -129,7 +127,7 @@ $.ajax({
         You can use it to create the same fake API in less than <strong>30 seconds</strong> with your own data.
       </p>
 
-      <pre><code class="bash">$ npm install -g json-server</code></pre>
+      <pre><code class="bash">npm install -g json-server</code></pre>
 
       <a href="https://github.com/typicode/katon" class="more" id="katon">
         <p>
@@ -146,6 +144,13 @@ $.ajax({
       <a href="https://github.com/typicode/husky" class="more" id="husky">
         <p>
           Do you sometimes forget to run tests before a git commit or push?
+        </p>
+      </a>
+
+      <a href="https://github.com/typicode/hotel" class="more" id="hotel">
+        <p>
+          See also <b>hotel</b><br>
+          Easily manage your servers from the browser
         </p>
       </a>
     </div>
@@ -196,10 +201,11 @@ $.ajax({
 
       // Display os-x element only for OS X users
       var isMac = navigator.platform.toLowerCase().indexOf('mac') >= 0;
-      var arr = ['pegasus', 'husky']
-      if (isMac) arr.push('katon')
-      var id = arr[Math.round(Math.random(1))]
-      document.getElementById(id).style.display = 'block'
+      // var arr = ['pegasus', 'husky']
+      // if (isMac) arr.push('katon')
+      // var id = arr[Math.round(Math.random(1))]
+      // document.getElementById(id).style.display = 'block'
+      document.getElementById('hotel').style.display = 'block'
 
       // Tell that jQuery can be used in console
       console.log('You can use jQuery functions')
