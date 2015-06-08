@@ -150,7 +150,14 @@ $.ajax({
       <a href="https://github.com/typicode/hotel" class="more" id="hotel">
         <p>
           See also <b>hotel</b><br>
-          Easily manage your servers from the browser
+          Start and stop your servers from the browser. No terminal needed.
+        </p>
+      </a>
+      
+      <a href="http://typicode.github.io/ghwn/" class="more" id="ghwn">
+        <p>
+          See also <b>GitHub Web Notifier</b><br>
+          Never miss something on GitHub.
         </p>
       </a>
     </div>
@@ -201,11 +208,10 @@ $.ajax({
 
       // Display os-x element only for OS X users
       var isMac = navigator.platform.toLowerCase().indexOf('mac') >= 0;
-      // var arr = ['pegasus', 'husky']
+      var arr = ['hotel', 'ghwn']
       // if (isMac) arr.push('katon')
-      // var id = arr[Math.round(Math.random(1))]
-      // document.getElementById(id).style.display = 'block'
-      document.getElementById('hotel').style.display = 'block'
+      var id = arr[Math.round(Math.random(1))]
+      document.getElementById(id).style.display = 'block'
 
       // Tell that jQuery can be used in console
       console.log('You can use jQuery functions')
