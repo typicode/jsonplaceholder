@@ -215,7 +215,7 @@ $.ajax({
 
       // Display os-x element only for OS X users
       var isMac = navigator.platform.toLowerCase().indexOf('mac') >= 0;
-      var arr = ['stop-server']
+      var arr = ['stop-server', 'stop-server']
       // if (isMac) arr.push('katon')
       var id = arr[Math.round(Math.random(1))]
       document.getElementById(id).style.display = 'block'
