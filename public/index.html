@@ -160,6 +160,13 @@ $.ajax({
           Never miss something on GitHub.
         </p>
       </a>
+      
+      <a href="https://github.com/typicode/stop-server" class="more" id="stop-server">
+        <p>
+          See also <b>stop-server</b><br>
+          Shut down your computer using a phone and Node.js
+        </p>
+      </a>
     </div>
 
     <footer>
@@ -208,7 +215,7 @@ $.ajax({
 
       // Display os-x element only for OS X users
       var isMac = navigator.platform.toLowerCase().indexOf('mac') >= 0;
-      var arr = ['hotel', 'ghwn']
+      var arr = ['stop-server']
       // if (isMac) arr.push('katon')
       var id = arr[Math.round(Math.random(1))]
       document.getElementById(id).style.display = 'block'
