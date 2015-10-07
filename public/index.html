@@ -203,9 +203,9 @@ $.ajax({
 
       // Run example
       $('#run').click(function() {
-        var root = 'http://localhost:3000';
-        $.ajax({
-          url: 'http://localhost:3000/posts/1',
+          var root = 'http://jsonplaceholder.typicode.com';
+          $.ajax({
+          url: root + '/posts/1',
           method: 'GET'
         }).then(function(data) {
           var str = JSON.stringify(data, null, '\t')
