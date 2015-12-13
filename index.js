@@ -12,7 +12,7 @@ app.all('*', function(req, res, next) {
   next()
 })
 
-app.use(jsonServer.defaults)
+app.use(jsonServer.defaults())
 app.use(router)
 
 app.listen(port, function() {
