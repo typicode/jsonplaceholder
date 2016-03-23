@@ -150,7 +150,7 @@ $.ajax({
       <a href="https://github.com/typicode/hotel" class="more" id="hotel">
         <p>
           See also <b>hotel</b><br>
-          Start and stop your servers from the browser. No terminal needed.
+          Local .dev domains for everyone and more!
         </p>
       </a>
       
@@ -213,11 +213,9 @@ $.ajax({
         });
       });
 
-      // Display os-x element only for OS X users
-      var isMac = navigator.platform.toLowerCase().indexOf('mac') >= 0;
-      var arr = ['stop-server', 'stop-server']
-      // if (isMac) arr.push('katon')
-      var id = arr[Math.round(Math.random(1))]
+      // var arr = ['stop-server', 'stop-server']
+      // var id = arr[Math.round(Math.random(1))]
+      var id = 'hotel'
       document.getElementById(id).style.display = 'block'
 
       // Tell that jQuery can be used in console
