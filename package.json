@@ -19,8 +19,8 @@
     "url": "https://github.com/typicode/jsonplaceholder.git"
   },
   "scripts": {
-    "start": "node src/server",
-    "test": "node test"
+    "start": "node index",
+    "test": "node test/app"
   },
   "dependencies": {
     "clone": "^1.0.2",
