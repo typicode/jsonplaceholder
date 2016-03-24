@@ -14,6 +14,7 @@ app.use((req, res, next) => {
 app.use(jsonServer.defaults({
   logger: process.env.NODE_ENV !== 'production'
 }))
+
 app.use(router)
 
 module.exports = app
