@@ -18,22 +18,23 @@
     "type": "git",
     "url": "https://github.com/typicode/jsonplaceholder.git"
   },
-  "bin": "./cli.js",
   "scripts": {
-    "start": "node index"
+    "start": "node src/server",
+    "test": "node test"
   },
   "dependencies": {
-    "clone": "^0.2.0",
-    "express": "^4.11.2",
+    "clone": "^1.0.2",
     "json-server": "^0.8.4"
   },
   "devDependencies": {
     "Faker": "~0.5.11",
     "rosie": "~0.2.0",
+    "supertest": "^1.2.0",
+    "tape": "^4.5.1",
     "underscore": "~1.5.2"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "5.x"
   },
   "license": "MIT"
 }
