@@ -9,18 +9,28 @@ test('GET /', (t) => {
 })
 
 test('POST /', (t) => {
-  request(app)
-    .post('/posts')
-    .send({ body: 'foo' })
-    .expect(201, (err) => {
-      t.error(err)
-      // Check that GET /posts length still returns 100 items
-      request(app)
-        .get('/posts')
-        .expect(200, (err, res) => {
-          t.error(err)
-          t.equal(res.body.length, 100, 'more than 100 posts found')
-          t.end()
-        })
-    })
+  const max = 10
+  t.plan(max * 3)
+
+  // Test concurrency
+  for (var i = 0; i < max; i++) {
+    request(app)
+      .post('/posts')
+      .send({ body: 'foo' })
+      .expect(201, (err) => {
+        t.error(err)
+        // Check that GET /posts length still returns 100 items
+        request(app)
+          .get('/posts')
+          .expect(200, (err, res) => {
+            t.error(err)
+            const { length } = res.body
+            t.equal(
+              length,
+              100,
+              `more than 100 posts found (${length})`
+            )
+          })
+      })
+  }
 })

@@ -7,7 +7,7 @@ const router = jsonServer.router(clone(data))
 
 app.use((req, res, next) => {
   if (req.path === '/') return next()
-  router.db.object = clone(data)
+  router.db.state(clone(data))
   next()
 })
 

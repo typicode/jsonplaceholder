@@ -34,7 +34,7 @@
     "underscore": "~1.5.2"
   },
   "engines": {
-    "node": "5.x"
+    "node": "6.x"
   },
   "license": "MIT"
 }
