@@ -2,6 +2,7 @@
   "name": "jsonplaceholder",
   "version": "0.3.3",
   "description": "A simple fake REST API server for testing and prototyping.",
+  "bin": "./bin/index.js",
   "keywords": [
     "fake",
     "JSON",
