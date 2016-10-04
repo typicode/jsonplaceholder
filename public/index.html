@@ -70,7 +70,8 @@
 
       <p>Run this code in a console or from anywhere (CORS and JSONP supported).</p>
 
-      <pre><code class="javascript">var root = '</code><code class="javascript" id="protocol">http:</code><code class="javascript">//jsonplaceholder.typicode.com';
+      <pre><code id="example" class="javascript">
+var root = 'http://jsonplaceholder.typicode.com';
 
 $.ajax({
   url: root + '/posts/1',
@@ -189,7 +190,8 @@ $.ajax({
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script>
       // Use http or https based on location.protocol
-      document.getElementById("protocol").innerHTML = location.protocol;
+      var exampleText = $('#example').text()
+      $('#example').text(exampleText.replace('http:', location.protocol))
       
       // Highlight result element
       $('#result').each(function(i, block) {
