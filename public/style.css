@@ -28,7 +28,7 @@ body {
 header {
   color: #333;
   text-align: center;
-  padding: 40px 1% 40px 1%;
+  padding: 60px 1% 40px 1%;
   font-size: 24px;
   border-bottom: 1px solid #DDD;
   margin-bottom: 40px;
@@ -128,17 +128,23 @@ a.more {
 }
 
 .more {
-  display: none;
   font-weight: 200;
-  margin: 40px 0 30px 0;
-  padding: 10px;
+  padding: 6px;
   background-color: #00AE77;
   color: white;
   font-size: 18px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .more p {
   margin: 0;
+}
+
+.fa-heart {
+  color: #d14;
 }
 
 @media (max-width: 700px) {

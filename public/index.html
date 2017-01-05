@@ -31,17 +31,6 @@
 
     <div class="narrow">
       <div class="center">
-        <!-- Twitter button -->
-        <div class="inline">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        </div>
-
-        <!-- Google plus -->
-        <div class="inline">
-          <div class="g-plusone" data-size="medium"></div>
-        </div>
-
         <!-- Facebook -->
         <div class="inline">
           <div id="fb-root"></div>
@@ -54,6 +43,16 @@
           }(document, 'script', 'facebook-jssdk'));</script>
 
           <div class="fb-like" data-href="http://jsonplaceholder.typicode.com/" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="false"></div>
+        </div>
+
+        <div class="inline">
+          <a
+            class="twitter-follow-button"
+            href="https://twitter.com/typicode"
+            data-show-count="false"
+          >
+            Follow @typicode
+          </a>
         </div>
       </div>
       <h2>Intro</h2>
@@ -128,53 +127,21 @@ $.ajax({
       </p>
 
       <pre><code class="bash">npm install -g json-server</code></pre>
-
-      <a href="https://github.com/typicode/katon" class="more" id="katon">
-        <p>
-          You seem to be on OS X, see also <u>katon</u>, another dev utility.
-        </p>
-      </a>
-
-      <a href="http://typicode.github.io/pegasus/" class="more" id="pegasus">
-        <p>
-          Check also <u>Pegasus</u>, a front-end library that lets you load JSON while still loading other scripts.
-        </p>
-      </a>
-
-      <a href="https://github.com/typicode/husky" class="more" id="husky">
-        <p>
-          Do you sometimes forget to run tests before a git commit or push?
-        </p>
-      </a>
-
-      <a href="https://github.com/typicode/hotel" class="more" id="hotel">
-        <p>
-          See also <b>hotel</b><br>
-          Local .dev domains for everyone and more!
-        </p>
-      </a>
-      
-      <a href="http://typicode.github.io/ghwn/" class="more" id="ghwn">
-        <p>
-          See also <b>GitHub Web Notifier</b><br>
-          Never miss something on GitHub.
-        </p>
-      </a>
-      
-      <a href="https://github.com/typicode/stop-server" class="more" id="stop-server">
-        <p>
-          See also <b>stop-server</b><br>
-          Shut down your computer using a phone and Node.js
-        </p>
-      </a>
     </div>
 
     <footer>
       <p>
         Coded and built with <i class="fa fa-heart"></i> by <a href="https://github.com/typicode">typicode</a>.
+
         Source code available on <a href="https://github.com/typicode/jsonplaceholder">GitHub</a>.
       </p>
     </footer>
+
+    <a href="https://github.com/typicode/hotel" class="more" id="hotel">
+      <p>
+        See also <b>hotel</b>, the friendly process manager for developers
+      </p>
+    </a>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -185,6 +152,23 @@ $.ajax({
       ga('create', 'UA-44497010-1', 'typicode.com');
       ga('send', 'pageview');
     </script>
+
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));</script>
 
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script>
@@ -216,11 +200,6 @@ $.ajax({
           });
         });
       });
-
-      // var arr = ['stop-server', 'stop-server']
-      // var id = arr[Math.round(Math.random(1))]
-      var id = 'hotel'
-      document.getElementById(id).style.display = 'block'
 
       // Tell that jQuery can be used in console
       console.log('You can use jQuery functions')
