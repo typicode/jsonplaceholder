@@ -85,7 +85,7 @@ _(10).times(function () {
 
     // Photos
     _(50).times(function() {
-      var photo = Factory.build('photo', {albumId: album.id, color: hex() })
+      var photo = Factory.build('photo', {albumId: album.id})
       db.photos.push(photo)
     })
   })
