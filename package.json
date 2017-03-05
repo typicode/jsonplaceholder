@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "Faker": "~0.5.11",
-    "rosie": "~0.2.0",
+    "rosie": "~1.6.0",
     "supertest": "^1.2.0",
     "tape": "^4.5.1",
     "underscore": "~1.5.2"

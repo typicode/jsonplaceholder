@@ -37,11 +37,12 @@ Factory.define('album')
 Factory.define('photo')
   .sequence('id')
   .attr('title', function() {return Faker.Lorem.sentence()})
-  .attr('color', hex())
-  .after(function(photo) {
-    photo.url = 'http://placehold.it/600/' + photo.color
-    photo.thumbnailUrl = 'http://placehold.it/150/' + photo.color
-    photo.color = undefined
+  .option('color', hex())
+  .attr('url', [ 'color' ], function(color) {
+    return 'http://placehold.it/600/' + color
+  })
+  .attr('thumbnailUrl', [ 'color' ], function(color) {
+    return 'http://placehold.it/150/' + color
   })
 
 Factory.define('todo')
