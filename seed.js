@@ -37,11 +37,11 @@ Factory.define('album')
 Factory.define('photo')
   .sequence('id')
   .attr('title', function() {return Faker.Lorem.sentence()})
-  .attr('url', function() {
-    return 'http://placehold.it/600/' + hex()
-  })
-  .attr('thumbnailUrl', function() {
-    return 'http://placehold.it/150/' + hex()
+  .attr('color', hex())
+  .after(function(photo) {
+    photo.url = 'http://placehold.it/600/' + photo.color
+    photo.thumbnailUrl = 'http://placehold.it/150/' + photo.color
+    photo.color = undefined
   })
 
 Factory.define('todo')
@@ -85,7 +85,7 @@ _(10).times(function () {
 
     // Photos
     _(50).times(function() {
-      var photo = Factory.build('photo', {albumId: album.id})
+      var photo = Factory.build('photo', {albumId: album.id, color: hex() })
       db.photos.push(photo)
     })
   })
