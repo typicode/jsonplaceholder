@@ -20,7 +20,8 @@
   },
   "scripts": {
     "start": "node index",
-    "test": "node test/app"
+    "test": "node test/app",
+    "precommit": "npm test"
   },
   "dependencies": {
     "clone": "^1.0.2",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "Faker": "~0.5.11",
+    "husky": "^0.13.2",
     "rosie": "~1.6.0",
     "supertest": "^1.2.0",
     "tape": "^4.5.1",
