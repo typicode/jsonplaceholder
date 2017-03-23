@@ -32,13 +32,26 @@ header {
   padding: 60px 1% 40px 1%;
   font-size: 24px;
   border-bottom: 1px solid #DDD;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 h1 {
   color: #2C3E50;
   letter-spacing: .1em;
   margin-bottom: 50px;
+}
+
+.sponsor {
+  margin: 20px 0 50px 0;
+  font-style: italic;
+  color: #999;
+  background: #F9F9F9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.sponsor a {
+  color: #4f96bd
 }
 
 p {
