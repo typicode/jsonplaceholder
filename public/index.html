@@ -56,7 +56,7 @@
         </div>
 
         <p class="sponsor">
-          "<a href="https://patreon.com/typicode" onclick="trackOutboundLink('https://patreon.com/typicode'); return false;">
+          "<a href="https://patreon.com/typicode" onclick="trackOutboundLink('https://patreon.com/typicode')">
             <b>Sponsor</b>
           </a>
           JSONPlaceholder and have your <b>company logo</b> on this page"
@@ -170,8 +170,7 @@ $.ajax({
       
       var trackOutboundLink = function(url) {
         ga('send', 'event', 'outbound', 'click', url, {
-          'transport': 'beacon',
-          'hitCallback': function(){document.location = url;}
+          'transport': 'beacon'
         });
       }
     </script>
