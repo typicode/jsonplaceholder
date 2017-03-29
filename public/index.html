@@ -55,12 +55,10 @@
           </a>
         </div>
 
-        <p class="sponsor">
-          "<a href="https://patreon.com/typicode" onclick="trackOutboundLink('https://patreon.com/typicode')">
-            <b>Sponsor</b>
-          </a>
-          JSONPlaceholder and have your <b>company logo</b> on this page"
-        </p>
+        <a class="sponsor" href="https://patreon.com/typicode" onclick="trackOutboundLink('https://patreon.com/typicode')">
+          <b>Sponsor</b>
+          JSONPlaceholder and have your <b>company logo</b> on this page
+        </a>
       </div>
       <h2>Intro</h2>
 
@@ -167,7 +165,7 @@ $.ajax({
 
       ga('create', 'UA-44497010-1', 'typicode.com');
       ga('send', 'pageview');
-      
+
       var trackOutboundLink = function(url) {
         ga('send', 'event', 'outbound', 'click', url, {
           'transport': 'beacon'
