@@ -50,14 +50,14 @@ a.sponsor {
   border-radius: 5px;
 }
 
-a.sponsor:hover {
-  color: #4f96bd
-}
-
 /*a.sponsor:hover {
+  color: #4f96bd
+}*/
+
+a.sponsor:hover {
   color: white;
   background: #E6461A;
-}*/
+}
 
 p {
   font-weight: normal;
