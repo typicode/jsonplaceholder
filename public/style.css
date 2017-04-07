@@ -41,13 +41,19 @@ h1 {
   margin-bottom: 50px;
 }
 
+.center {
+  text-align: center;
+}
+
 a.sponsor {
-  display: block;
+  display: inline-block;
   margin: 20px 0 50px 0;
   color: #999;
   background: #F9F9F9;
   padding: 20px;
   border-radius: 5px;
+  -webkit-transition: .2s; /* Safari */
+  transition: .2s;
 }
 
 /*a.sponsor:hover {
@@ -57,6 +63,7 @@ a.sponsor {
 a.sponsor:hover {
   color: white;
   background: #E6461A;
+  text-decoration: none;
 }
 
 p {
