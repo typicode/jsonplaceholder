@@ -48,8 +48,8 @@ h1 {
 a.sponsor {
   display: inline-block;
   margin: 20px 0 50px 0;
-  color: #999;
-  background: #F9F9F9;
+  color: white;
+  background: #E6461A;
   padding: 20px;
   border-radius: 5px;
   -webkit-transition: .2s; /* Safari */
@@ -61,9 +61,8 @@ a.sponsor {
 }*/
 
 a.sponsor:hover {
-  color: white;
-  background: #E6461A;
   text-decoration: none;
+  background: #e04419;
 }
 
 p {
