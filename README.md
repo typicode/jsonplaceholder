@@ -16,13 +16,6 @@ But I liked the idea of image placeholders for web designers. So I decided to co
 
 You can find it running here and are free to use it in your developments: http://jsonplaceholder.typicode.com. 
 
-Or you can run it locally:
-
-```
-$ npm install -g jsonplaceholder
-$ jsonplaceholder
-```
-
 I hope you will find it useful.
 
 ## Features
