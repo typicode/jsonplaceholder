@@ -1,6 +1,6 @@
 # JSONPlaceholder
 
-[JSONPlaceholder](http://jsonplaceholder.typicode.com) is a simple fake REST API for testing and prototyping.
+[JSONPlaceholder](https://jsonplaceholder.typicode.com) is a simple fake REST API for testing and prototyping.
 
 It's like an [image placeholder](http://placehold.it/) but for web developers.
 
@@ -18,7 +18,7 @@ I didn't like the idea of using some public API because I had the feeling that I
 
 But I liked the idea of image placeholders for web designers. So I decided to code a little Express server inspired by that and here is JSONPlaceholder.
 
-You can find it running here and are free to use it in your developments: http://jsonplaceholder.typicode.com. 
+You can find it running here and are free to use it in your developments: https://jsonplaceholder.typicode.com. 
 
 I hope you will find it useful.
 
@@ -37,12 +37,12 @@ I hope you will find it useful.
 
 Let's start with resources, JSONPlaceholder provides the usual suspects:
 
-* Posts http://jsonplaceholder.typicode.com/posts/1
-* Comments http://jsonplaceholder.typicode.com/comments/1
-* Albums http://jsonplaceholder.typicode.com/albums/1
-* Photos http://jsonplaceholder.typicode.com/photos/1
-* Users http://jsonplaceholder.typicode.com/users/1
-* Todos http://jsonplaceholder.typicode.com/todos/1
+* Posts https://jsonplaceholder.typicode.com/posts/1
+* Comments https://jsonplaceholder.typicode.com/comments/1
+* Albums https://jsonplaceholder.typicode.com/albums/1
+* Photos https://jsonplaceholder.typicode.com/photos/1
+* Users https://jsonplaceholder.typicode.com/users/1
+* Todos https://jsonplaceholder.typicode.com/todos/1
 
 ## How to
 
@@ -52,7 +52,7 @@ Since GitHub loads jQuery, you can simply copy and paste these examples in a con
 ### Showing a resource
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
+$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'GET'
 }).then(function(data) {
   console.log(data);
@@ -62,7 +62,7 @@ $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
 ### Listing resources
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts', {
+$.ajax('https://jsonplaceholder.typicode.com/posts', {
   method: 'GET'
 }).then(function(data) {
   console.log(data);
@@ -73,7 +73,7 @@ $.ajax('http://jsonplaceholder.typicode.com/posts', {
 
 ```javascript
 // POST adds a random id to the object sent
-$.ajax('http://jsonplaceholder.typicode.com/posts', {
+$.ajax('https://jsonplaceholder.typicode.com/posts', {
   method: 'POST',
   data: {
     title: 'foo',
@@ -99,7 +99,7 @@ Note: the resource will not be really created on the server but it will be faked
 ### Updating a resource
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
+$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'PUT',
   data: {
     id: 1,
@@ -122,7 +122,7 @@ $.ajax('http://jsonplaceholder.typicode.com/posts/1', {
 ```
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
+$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'PATCH',
   data: {
     title: 'foo'
@@ -146,7 +146,7 @@ Note: the resource will not be really updated on the server but it will be faked
 ### Deleting a resource
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
+$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'DELETE'
 });
 ```
@@ -159,7 +159,7 @@ Basic filtering is supported through query parameters.
 
 ```javascript
 // Will return all the posts that belong to the first user
-$.ajax('http://jsonplaceholder.typicode.com/posts?userId=1').then(function(data) {
+$.ajax('https://jsonplaceholder.typicode.com/posts?userId=1').then(function(data) {
   console.log(data);
 });
 ```
@@ -169,7 +169,7 @@ $.ajax('http://jsonplaceholder.typicode.com/posts?userId=1').then(function(data)
 One level of nested route is available.
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1/comments').then(function(data) {
+$.ajax('https://jsonplaceholder.typicode.com/posts/1/comments').then(function(data) {
   console.log(data);
 });
 // Which is equivalent to /comments?postId=1
@@ -177,16 +177,16 @@ $.ajax('http://jsonplaceholder.typicode.com/posts/1/comments').then(function(dat
 
 Here's the list of available nested routes:
 
-* http://jsonplaceholder.typicode.com/posts/1/comments
-* http://jsonplaceholder.typicode.com/albums/1/photos
-* http://jsonplaceholder.typicode.com/users/1/albums
-* http://jsonplaceholder.typicode.com/users/1/todos
-* http://jsonplaceholder.typicode.com/users/1/posts
+* https://jsonplaceholder.typicode.com/posts/1/comments
+* https://jsonplaceholder.typicode.com/albums/1/photos
+* https://jsonplaceholder.typicode.com/users/1/albums
+* https://jsonplaceholder.typicode.com/users/1/todos
+* https://jsonplaceholder.typicode.com/users/1/posts
 
 ### JSONP request
 
 ```javascript
-$.ajax('http://jsonplaceholder.typicode.com/posts/1', {
+$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
   dataType: 'jsonp'
 }).then(function(data) {
   console.log(data);
