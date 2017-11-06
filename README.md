@@ -70,7 +70,7 @@ function json(response) {
 ### Showing a resource
 
 ```javascript
-fetch('http://jsonplaceholder.typicode.com/posts/1')
+fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(status)
   .then(json)
   .then(function(data) {
@@ -85,7 +85,7 @@ Note: The response of a fetch() request is a Stream object, which means that whe
 ### Listing resources
 
 ```javascript
-fetch('http://jsonplaceholder.typicode.com/posts')
+fetch('https://jsonplaceholder.typicode.com/posts')
   .then(status)
   .then(json)
   .then(function(data) {
@@ -100,12 +100,15 @@ fetch('http://jsonplaceholder.typicode.com/posts')
 
 ```javascript
 // POST adds a random id to the object sent
-fetch('http://jsonplaceholder.typicode.com/posts', {
+fetch('https://jsonplaceholder.typicode.com/posts', {
   method: 'POST',
-  body: {
+  body: JSON.stringify({
     title: 'foo',
     body: 'bar',
     userId: 1
+  }),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
   }
 })
 .then(json)
@@ -131,13 +134,16 @@ Note: the resource will not be really created on the server but it will be faked
 ### Updating a resource
 
 ```javascript
-fetch('http://jsonplaceholder.typicode.com/posts/1', {
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'PUT',
-  body: {
+  body: JSON.stringify({
     id: 1,
     title: 'foo',
     body: 'bar',
     userId: 1
+  }),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
   }
 })
 .then(json)
@@ -161,7 +167,7 @@ fetch('http://jsonplaceholder.typicode.com/posts/1', {
 ### Deleting a resource
 
 ```javascript
-fetch('http://jsonplaceholder.typicode.com/posts/1', {
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'DELETE'
 });
 ```
@@ -174,7 +180,7 @@ Basic filtering is supported through query parameters.
 
 ```javascript
 // Will return all the posts that belong to the first user
-fetch('http://jsonplaceholder.typicode.com/posts?userId=1')
+fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
   .then(status)
   .then(json)
   .then(function(data) {
@@ -190,7 +196,7 @@ fetch('http://jsonplaceholder.typicode.com/posts?userId=1')
 One level of nested route is available.
 
 ```javascript
-fetch('http://jsonplaceholder.typicode.com/posts/1/comments')
+fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
   .then(status)
   .then(json)
   .then(function(data) {
@@ -204,11 +210,11 @@ fetch('http://jsonplaceholder.typicode.com/posts/1/comments')
 
 Here's the list of available nested routes:
 
-* http://jsonplaceholder.typicode.com/posts/1/comments
-* http://jsonplaceholder.typicode.com/albums/1/photos
-* http://jsonplaceholder.typicode.com/users/1/albums
-* http://jsonplaceholder.typicode.com/users/1/todos
-* http://jsonplaceholder.typicode.com/users/1/posts
+* https://jsonplaceholder.typicode.com/posts/1/comments
+* https://jsonplaceholder.typicode.com/albums/1/photos
+* https://jsonplaceholder.typicode.com/users/1/albums
+* https://jsonplaceholder.typicode.com/users/1/todos
+* https://jsonplaceholder.typicode.com/users/1/posts
 
 ### JSONP request
  
