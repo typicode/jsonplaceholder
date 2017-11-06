@@ -79,12 +79,24 @@
 
       <pre><code id="example" class="javascript">var root = 'http://jsonplaceholder.typicode.com';
 
-$.ajax({
-  url: root + '/posts/1',
-  method: 'GET'
-}).then(function(data) {
-  console.log(data);
-});</code></pre>
+function status(response) {
+  if (response.status >= 200 && response.status < 300) {
+    return Promise.resolve(response)
+  } else {
+    return Promise.reject(new Error(response.statusText))
+  }
+}
+
+function json(response) {
+  return response.json()
+}
+
+fetch(root + '/posts/1')
+  .then(status)
+  .then(json)
+  .then(function(data) {
+    console.log(data);
+  });</code></pre>
 
       <p>
         <button id="run">Run</button>
@@ -207,6 +219,7 @@ $.ajax({
     }(document, "script", "twitter-wjs"));</script>
 
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
     <script>
       // Use http or https based on location.protocol
       var exampleText = $('#example').text()
@@ -217,28 +230,40 @@ $.ajax({
         hljs.highlightBlock(block);
       });
 
+      function status(response) {
+        if (response.status >= 200 && response.status < 300) {
+          return Promise.resolve(response)
+        } else {
+          return Promise.reject(new Error(response.statusText))
+        }
+      }
+
+      function json(response) {
+        return response.json()
+      }
+
       // Run example
       $('#run').click(function() {
         var root = location.protocol + '//jsonplaceholder.typicode.com';
-        $.ajax({
-          url: root + '/posts/1',
-          method: 'GET'
-        }).then(function(data) {
-          var str = JSON.stringify(data, null, '\t')
-          $('#result').html(
-            str.replace(/\n/g, '<br/>')
-               .replace(/\\n/g, ' ')
-               .replace(/\t/g, '&nbsp;&nbsp;')
-          );
+        fetch(root + '/posts/1')
+          .then(status)
+          .then(json)
+          .then(function(data) {
+            var str = JSON.stringify(data, null, '\t')
+            $('#result').html(
+              str.replace(/\n/g, '<br/>')
+                 .replace(/\\n/g, ' ')
+                .replace(/\t/g, '&nbsp;&nbsp;')
+            );
 
-          $('#result').each(function(i, block) {
-            hljs.highlightBlock(block);
+            $('#result').each(function(i, block) {
+              hljs.highlightBlock(block);
+            });
           });
-        });
       });
 
       // Tell that jQuery can be used in console
-      console.log('You can use jQuery functions')
+      console.log('You can use jQuery functions');
     </script>
   </body>
 </html>
