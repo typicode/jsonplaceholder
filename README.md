@@ -29,9 +29,9 @@ I hope you will find it useful.
 * Basic API
 * "Has many" relationships
 * Filters and nested resources
-* Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
+* Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
 * Supports GET, POST, PUT, PATCH, DELETE and OPTIONS verbs
-* Compatible with Backbone, AngularJS, Ember, ...
+* Compatible with React, Angular, Vue, Ember, ...
 
 ## Available resources
 
@@ -46,43 +46,79 @@ Let's start with resources, JSONPlaceholder provides the usual suspects:
 
 ## How to
 
-Here's some code using jQuery showing what can be done with JSONPlaceholder. 
-Since GitHub loads jQuery, you can simply copy and paste these examples in a console.
+Here's some code using fetch api (which is now supported by all major browsers) showing what can be done with JSONPlaceholder. 
+
+You can read more about how fetch works using the following links: https://developers.google.com/web/updates/2015/03/introduction-to-fetch
+
+* If you are working with a JSON API, you'll need to check the status and parse the JSON for each response. 
+* You can simplify your code by defining the status and JSON parsing in separate functions which return promises, freeing you to only worry about handling the final data and the error case.
+
+### Common Code for all fetch calls
+```javascript
+function status(response) {
+  if (response.status >= 200 && response.status < 300) {
+    return Promise.resolve(response)
+  } else {
+    return Promise.reject(new Error(response.statusText))
+  }
+}
+
+function json(response) {
+  return response.json()
+}
+```
 
 ### Showing a resource
 
 ```javascript
-$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
-  method: 'GET'
-}).then(function(data) {
-  console.log(data);
-});
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(status)
+  .then(json)
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log('Fetch Error :-S', error);
+  });
 ```
+Note: The response of a fetch() request is a Stream object, which means that when we call the json() method, a Promise is returned since the reading of the stream will happen asynchronously.
 
 ### Listing resources
 
 ```javascript
-$.ajax('https://jsonplaceholder.typicode.com/posts', {
-  method: 'GET'
-}).then(function(data) {
-  console.log(data);
-});
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(status)
+  .then(json)
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log('Fetch Error :-S', error);
+  });
 ```
 
 ### Creating a resource
 
 ```javascript
 // POST adds a random id to the object sent
-$.ajax('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  data: {
-    title: 'foo',
-    body: 'bar',
-    userId: 1
-  }
-}).then(function(data) {
-  console.log(data);
-});
+fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(json)
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log('Fetch Error :-S', error);
+  });
 
 /* will return
 {
@@ -99,17 +135,25 @@ Note: the resource will not be really created on the server but it will be faked
 ### Updating a resource
 
 ```javascript
-$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
-  method: 'PUT',
-  data: {
-    id: 1,
-    title: 'foo',
-    body: 'bar',
-    userId: 1
-  }
-}).then(function(data) {
-  console.log(data);
-});
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PUT',
+    body: JSON.stringify({
+      id: 1,
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(json)
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log('Fetch Error :-S', error);
+  });
 
 /* will return
 {
@@ -122,14 +166,22 @@ $.ajax('https://jsonplaceholder.typicode.com/posts/1', {
 ```
 
 ```javascript
-$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
-  method: 'PATCH',
-  data: {
-    title: 'foo'
-  }
-}).then(function(data) {
-  console.log(data);
-});
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PATCH',
+    body: JSON.stringify({
+      title: 'foo'
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(json)
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log('Fetch Error :-S', error);
+  });
 
 /* will return
 {
@@ -146,7 +198,7 @@ Note: the resource will not be really updated on the server but it will be faked
 ### Deleting a resource
 
 ```javascript
-$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'DELETE'
 });
 ```
@@ -159,9 +211,15 @@ Basic filtering is supported through query parameters.
 
 ```javascript
 // Will return all the posts that belong to the first user
-$.ajax('https://jsonplaceholder.typicode.com/posts?userId=1').then(function(data) {
-  console.log(data);
-});
+fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+  .then(status)
+  .then(json)
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log('Fetch Error :-S', error);
+  });
 ```
 
 ### Nested resources
@@ -169,10 +227,16 @@ $.ajax('https://jsonplaceholder.typicode.com/posts?userId=1').then(function(data
 One level of nested route is available.
 
 ```javascript
-$.ajax('https://jsonplaceholder.typicode.com/posts/1/comments').then(function(data) {
-  console.log(data);
-});
-// Which is equivalent to /comments?postId=1
+// equivalent to /comments?postId=1
+fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+  .then(status)
+  .then(json)
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(error) {
+    console.log('Fetch Error :-S', error);
+  });
 ```
 
 Here's the list of available nested routes:
@@ -182,13 +246,3 @@ Here's the list of available nested routes:
 * https://jsonplaceholder.typicode.com/users/1/albums
 * https://jsonplaceholder.typicode.com/users/1/todos
 * https://jsonplaceholder.typicode.com/users/1/posts
-
-### JSONP request
-
-```javascript
-$.ajax('https://jsonplaceholder.typicode.com/posts/1', {
-  dataType: 'jsonp'
-}).then(function(data) {
-  console.log(data);
-});
-```
