@@ -45,6 +45,21 @@ h1 {
   text-align: center;
 }
 
+.see-also {
+  border-bottom: 1px solid #DDD;
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+.see-also a {
+  color: inherit;
+}
+
+img {
+  vertical-align: middle;
+  height: 40px;
+}
+
 a.sponsor {
   display: inline-block;
   margin: 20px 0 50px 0;
@@ -85,10 +100,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-button {
-  font-size: 18px;
 }
 
 pre, #result {
@@ -158,6 +169,7 @@ td.verb {
   top: 0;
   width: 100%;
   text-align: center;
+  font-size: 14px;
 }
 
 .more p {

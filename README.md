@@ -27,6 +27,7 @@ I hope you will find it useful.
 * Filters and nested resources
 * Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
 * Supports GET, POST, PUT, PATCH, DELETE and OPTIONS verbs
+* HTTP or HTTPS
 * Compatible with React, Angular, Vue, Ember, ...
 
 ## Available resources
@@ -42,60 +43,27 @@ Let's start with resources, JSONPlaceholder provides the usual suspects:
 
 ## How to
 
-Here's some code using fetch api (which is now supported by all major browsers) showing what can be done with JSONPlaceholder. 
-
-You can read more about how fetch works using the following links: https://developers.google.com/web/updates/2015/03/introduction-to-fetch
-
-* If you are working with a JSON API, you'll need to check the status and parse the JSON for each response. 
-* You can simplify your code by defining the status and JSON parsing in separate functions which return promises, freeing you to only worry about handling the final data and the error case.
-
-### Common Code for all fetch calls
-```javascript
-function status(response) {
-  if (response.status >= 200 && response.status < 300) {
-    return Promise.resolve(response)
-  } else {
-    return Promise.reject(new Error(response.statusText))
-  }
-}
-
-function json(response) {
-  return response.json()
-}
-```
+Here's some code using [Fetch API](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API) showing what can be done with JSONPlaceholder.
 
 ### Showing a resource
 
-```javascript
+```js
 fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(status)
-  .then(json)
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(error) {
-    console.log('Fetch Error :-S', error);
-  });
+  .then(response => response.json())
+  .then(json => console.log(json))
 ```
-Note: The response of a fetch() request is a Stream object, which means that when we call the json() method, a Promise is returned since the reading of the stream will happen asynchronously.
 
 ### Listing resources
 
-```javascript
+```js
 fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(status)
-  .then(json)
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(error) {
-    console.log('Fetch Error :-S', error);
-  });
+  .then(response => response.json())
+  .then(json => console.log(json))
 ```
 
 ### Creating a resource
 
-```javascript
+```js
 // POST adds a random id to the object sent
 fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
@@ -108,13 +76,8 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
       "Content-type": "application/json; charset=UTF-8"
     }
   })
-  .then(json)
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(error) {
-    console.log('Fetch Error :-S', error);
-  });
+  .then(response => response.json())
+  .then(json => console.log(json))
 
 /* will return
 {
@@ -130,7 +93,7 @@ Note: the resource will not be really created on the server but it will be faked
 
 ### Updating a resource
 
-```javascript
+```js
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
     method: 'PUT',
     body: JSON.stringify({
@@ -143,13 +106,8 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
       "Content-type": "application/json; charset=UTF-8"
     }
   })
-  .then(json)
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(error) {
-    console.log('Fetch Error :-S', error);
-  });
+  .then(response => response.json())
+  .then(json => console.log(json))
 
 /* will return
 {
@@ -161,7 +119,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 */
 ```
 
-```javascript
+```js
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
     method: 'PATCH',
     body: JSON.stringify({
@@ -171,13 +129,8 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
       "Content-type": "application/json; charset=UTF-8"
     }
   })
-  .then(json)
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(error) {
-    console.log('Fetch Error :-S', error);
-  });
+  .then(response => response.json())
+  .then(json => console.log(json))
 
 /* will return
 {
@@ -193,10 +146,10 @@ Note: the resource will not be really updated on the server but it will be faked
 
 ### Deleting a resource
 
-```javascript
+```js
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'DELETE'
-});
+})
 ```
 
 Note: the resource will not be really deleted on the server but it will be faked as if. 
@@ -205,34 +158,22 @@ Note: the resource will not be really deleted on the server but it will be faked
 
 Basic filtering is supported through query parameters.
 
-```javascript
+```js
 // Will return all the posts that belong to the first user
 fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
-  .then(status)
-  .then(json)
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(error) {
-    console.log('Fetch Error :-S', error);
-  });
+  .then(response => response.json())
+  .then(json => console.log(json))
 ```
 
 ### Nested resources
 
 One level of nested route is available.
 
-```javascript
+```js
 // equivalent to /comments?postId=1
 fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
-  .then(status)
-  .then(json)
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(error) {
-    console.log('Fetch Error :-S', error);
-  });
+  .then(response => response.json())
+  .then(json => console.log(json))
 ```
 
 Here's the list of available nested routes:
