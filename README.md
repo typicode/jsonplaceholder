@@ -25,7 +25,7 @@ I hope you will find it useful.
 * Basic API
 * "Has many" relationships
 * Filters and nested resources
-* Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
+* Cross-domain ([CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) and [JSONP](http://en.wikipedia.org/wiki/JSONP))
 * Supports GET, POST, PUT, PATCH, DELETE and OPTIONS verbs
 * HTTP or HTTPS
 * Compatible with React, Angular, Vue, Ember, ...
@@ -111,7 +111,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 
 /* will return
 {
-  id: 1
+  id: 1,
   title: 'foo',
   body: 'bar',
   userId: 1
@@ -134,7 +134,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 
 /* will return
 {
-  id: 1
+  id: 1,
   title: 'foo',
   body: 'quia et suscipit [...]',
   userId: 1
