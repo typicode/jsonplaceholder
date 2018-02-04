@@ -43,7 +43,7 @@ Let's start with resources, JSONPlaceholder provides the usual suspects:
 
 ## How to
 
-Here's some code using [Fetch API](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API) showing what can be done with JSONPlaceholder.
+Here's some code using [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) showing what can be done with JSONPlaceholder.
 
 ### Showing a resource
 
