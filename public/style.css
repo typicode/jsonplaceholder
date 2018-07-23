@@ -51,13 +51,13 @@ h1 {
   padding-bottom: 40px;
 }
 
-.see-also a {
-  color: inherit;
+.see-also h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
-img {
-  vertical-align: middle;
-  height: 40px;
+.see-also a {
+  color: inherit;
 }
 
 a.sponsor {
