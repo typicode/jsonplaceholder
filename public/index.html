@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/mono-blue.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <title>JSONPlaceholder - Fake online REST API for developers</title>
@@ -94,7 +94,7 @@
       border-width: .125rem;
       border-radius: .25rem;
       border-style: solid;
-      border-color: currentColor;
+      border-color: #5661B3;
       background-color: white;
       color: #5661B3;
       cursor: pointer;
@@ -129,16 +129,12 @@
   <!-- Hero -->
   <div class="hero">
     <h1>
-      <span>{</span>
-      <span>JSON</span>
-      <span>:</span>
-      <span>Placeholder</span>
-      <span>}</span>
+      JSONPlaceholder
     </h1>
 
-    <p>
+    <p class="subtitle">
       Fake Online REST API for Testing and Prototyping
-      <br> Serving ~200 millions API requests per month
+      <br> Serving ~200M requests per month
     </p>
     <p>
       Powered by
@@ -174,7 +170,7 @@
       <!-- Example -->
       <h2>Example</h2>
       <p>
-        Run this code in a console or from anywhere
+        Run this code in a console or from any site:
       </p>
 
       <pre><code id="example" class="javascript">fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -187,10 +183,8 @@
         <span id="run-message">Awesome 👍</span>
       </p>
 
-      <pre><code id="result" class="json"></code></pre>
-
       <p>
-        <strong>Tip</strong> you can use
+        <strong>Tip</strong>: you can use
         <b>
           http
         </b> or
@@ -198,6 +192,8 @@
           https
         </b> when making requests to JSONPlaceholder.
       </p>
+
+      <pre><code id="result" class="json"></code></pre>
 
       <!-- Resources -->
       <h2>Resources</h2>
@@ -245,7 +241,7 @@
       </table>
 
       <p>
-        <strong>Note</strong> resources have relations. For example:
+        <strong>Note</strong>: resources have relations. For example:
         <b>posts</b> have many
         <b>comments</b>,
         <b>albums</b> have many
@@ -309,18 +305,15 @@
       </table>
 
       <p>
-        <strong>Note</strong> you can view detailed examples
-        <strong>
-          <a href="https://github.com/typicode/jsonplaceholder#how-to">here</a>
-        </strong>
+        <strong>Note</strong>: you can view detailed examples
+        <a href="https://github.com/typicode/jsonplaceholder#how-to">here</a>
       </p>
 
       <!-- JSON Server -->
       <h2>Use your own data</h2>
       <p>
-        <strong>
-          <a href="https://github.com/typicode/json-server">JSON Server</a>
-        </strong> powers this website. You can use it to create the same fake API in less than
+        <a href="https://github.com/typicode/json-server">JSON Server</a>
+        powers this website. You can use it to create the same fake API in less than
         <strong>30 seconds</strong> with your own data.
       </p>
 
@@ -336,8 +329,7 @@
     <p>
       Coded and built with ❤️ by
       <a href="https://github.com/typicode">typicode</a>
-      <br>
-      Source code available on
+      <br> Source code available on
       <a href="https://github.com/typicode/jsonplaceholder">GitHub</a>
       <br>
       <a href="https://github.com/typicode/jsonplaceholder/blob/master/CHANGELOG.md">CHANGELOG</a>
