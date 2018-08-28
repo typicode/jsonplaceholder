@@ -12,12 +12,12 @@
   <style>
     body {
       font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      color: #22292F;
+      color: rgba(0, 0, 0, 0.84);
       line-height: 1.5;
     }
 
     a {
-      color: #5661B3;
+      color: #1e87f0;
       text-decoration: none;
       border-bottom: 1px solid transparent;
     }
@@ -27,6 +27,7 @@
     }
 
     h1 {
+      margin: 0;
       font-size: 4rem;
       font-weight: 300;
       letter-spacing: 0.05em;
@@ -39,8 +40,9 @@
     }
 
     h2 {
-      margin-top: 4rem;
-      margin-bottom: 1rem;
+      margin-top: 6rem;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
       font-weight: normal;
     }
 
@@ -57,65 +59,70 @@
       width: 8rem;
     }
 
-    .line {
-      padding: .25rem;
-      background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-    }
-
     .container {
-      max-width: 60rem;
+      max-width: 48rem;
       margin: auto;
       padding: 1rem;
     }
 
     .hero {
-      padding: 4rem;
+      padding: 6rem 0;
       text-align: center;
     }
 
     .sponsors {
       margin-bottom: 2rem;
-      padding: 1rem;
+      padding: 6rem 0;
       background-color: #f8fafc;
       text-align: center;
     }
 
+    .sponsors h3 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+
     .sponsors p:last-of-type {
       margin-top: 2rem;
+      margin-bottom: 0;
     }
 
     main {
-      margin-bottom: 4rem;
+      margin-bottom: 6rem;
     }
 
     #run-button {
       padding: .5rem 1rem;
       margin-right: 1rem;
-      border-width: .125rem;
+      border-width: 0;
       border-radius: .25rem;
-      border-style: solid;
-      border-color: #5661B3;
-      background-color: white;
-      color: #5661B3;
+      background-color: #1e87f0;
+      color: white;
       cursor: pointer;
       transition: all .25s;
     }
 
-    #run-button:hover {
-      background-color: #5661B3;
-      color: white;
+    #run-message {
+      opacity: 0;
+      transition: all .25s;
     }
 
-    #run-message {
-      display: none;
+    pre {
+      /* hack */
+      background: #f8f8f8;
     }
 
     #result {
-      display: none;
+      margin: 1.5rem 0 0;
+      height: 176px;
+      opacity: 0;
+      transition: all .25s;
     }
 
     footer {
-      padding: 1rem;
+      padding: 6rem;
       background-color: #f8fafc;
       text-align: center;
     }
@@ -123,37 +130,34 @@
 </head>
 
 <body>
-  <!-- Line -->
-  <div class="line"></div>
-
   <!-- Hero -->
   <div class="hero">
-    <h1>
-      JSONPlaceholder
-    </h1>
+    <div class="container">
+      <h1>
+        JSONPlaceholder
+      </h1>
 
-    <p class="subtitle">
-      Fake Online REST API for Testing and Prototyping
-      <br> Serving ~200M requests per month
-    </p>
-    <p>
-      Powered by
-      <a href="https://github.com/typicode/json-server">JSON Server</a>
-      and
-      <a href="https://github.com/typicode/lowdb">LowDB</a>
-    </p>
+      <p class="subtitle">
+        Fake Online REST API for Testing and Prototyping
+        <br> Serving ~200M requests per month
+        <br> Powered by
+        <a href="https://github.com/typicode/json-server">JSON Server</a>
+        +
+        <a href="https://github.com/typicode/lowdb">LowDB</a>
+      </p>
+    </div>
   </div>
 
   <!-- Sponsors -->
   <div class="sponsors">
-    <h3>Sponsors 🙏</h3>
+    <h3>sponsored by</h3>
     <p>
       <a href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA" target="_blank">
         <img src="https://i.imgur.com/2LDiENb.png" height="60px">
       </a>
     </p>
     <p>
-      <a href="https://patreon.com/typicode">[Become a sponsor]</a>
+      <a href="https://patreon.com/typicode">become a sponsor</a>
     </p>
   </div>
 
@@ -163,7 +167,7 @@
       <!-- Intro -->
       <h2>Intro</h2>
       <p>
-        JSONPlaceholder is a free online REST service that you can use whenever you need some fake data.
+        JSONPlaceholder is a free online REST API that you can use whenever you need some fake data.
         <br>It's great for tutorials, testing new libraries, sharing code examples, ...
       </p>
 
@@ -179,9 +183,11 @@
 </code></pre>
 
       <p>
-        <button id="run-button">Make an API call</button>
-        <span id="run-message">Awesome 👍</span>
+        <button id="run-button">Try it</button>
       </p>
+
+      <pre><code id="result" class="json"></code></pre>
+      <span id="run-message">Congrats you've made your first call to JSONPlaceholder! 😃</span>
 
       <p>
         <strong>Tip</strong>: you can use
@@ -193,12 +199,10 @@
         </b> when making requests to JSONPlaceholder.
       </p>
 
-      <pre><code id="result" class="json"></code></pre>
-
       <!-- Resources -->
       <h2>Resources</h2>
       <p>
-        JSONPlaceholder comes with a set of common resources.
+        JSONPlaceholder comes with a set of 6 common resources:
       </p>
 
       <table class="resources">
@@ -245,7 +249,7 @@
         <b>posts</b> have many
         <b>comments</b>,
         <b>albums</b> have many
-        <b>photos</b>, ...
+        <b>photos</b>, ... see below for routes examples.
       </p>
 
       <!-- Routes -->
@@ -306,7 +310,7 @@
 
       <p>
         <strong>Note</strong>: you can view detailed examples
-        <a href="https://github.com/typicode/jsonplaceholder#how-to">here</a>
+        <a href="https://github.com/typicode/jsonplaceholder#how-to">here</a>.
       </p>
 
       <!-- JSON Server -->
@@ -326,20 +330,22 @@
 
   <!-- Footer -->
   <footer>
-    <p>
-      Coded and built with ❤️ by
-      <a href="https://github.com/typicode">typicode</a>
-      <br> Source code available on
-      <a href="https://github.com/typicode/jsonplaceholder">GitHub</a>
-      <br>
-      <a href="https://github.com/typicode/jsonplaceholder/blob/master/CHANGELOG.md">CHANGELOG</a>
-    </p>
-    <p>
-      <!-- Later... -->
-      <!-- <a href="https://patreon.com/typicode">
+    <div class="container">
+      <p>
+        Coded and built with ❤️ by
+        <a href="https://github.com/typicode">typicode</a>
+        <br> Source code available on
+        <a href="https://github.com/typicode/jsonplaceholder">GitHub</a>
+        <br>
+        <a href="https://github.com/typicode/jsonplaceholder/blob/master/CHANGELOG.md">CHANGELOG</a>
+      </p>
+      <p>
+        <!-- Later... -->
+        <!-- <a href="https://patreon.com/typicode">
         <img alt="" src="become_a_patron_button.png">
       </a> -->
-    </p>
+      </p>
+    </div>
   </footer>
 
   <!-- Analytics -->
@@ -376,8 +382,8 @@
 
       // Hide or disable things during API call
       runButton.disabled = true
-      runMessage.style.display = 'none'
-      result.style.display = 'none'
+      runMessage.style.opacity = 0
+      result.style.opacity = 0
 
       fetch('https://jsonplaceholder.typicode.com/todos/1')
         .then(response => response.json())
@@ -394,8 +400,8 @@
 
           // Show and enable things after API call
           runButton.disabled = false
-          runMessage.style.display = 'inline'
-          result.style.display = 'block'
+          runMessage.style.opacity = 1
+          result.style.opacity = 1
         })
     }
   </script>
