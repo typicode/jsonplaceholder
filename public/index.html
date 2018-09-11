@@ -51,6 +51,26 @@
       font-weight: normal;
     }
 
+    nav {
+      text-align: center;
+      border-bottom: 1px solid #f8fafc;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+    }
+
+    nav li a {
+      display: inline-block;
+      padding: 1rem;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
     .hljs {
       padding: 1rem;
     }
@@ -130,6 +150,15 @@
 </head>
 
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="https://thanks.typicode.com">Supporters</a></li>
+        <li><a href="https://www.patreon.com/typicode">Patreon</a></li>
+        <li><a href="https://github.com/typicode">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
   <!-- Hero -->
   <div class="hero">
     <div class="container">
@@ -192,7 +221,7 @@
       </p>
 
       <pre><code id="result" class="json"></code></pre>
-      <span id="run-message">Congrats you've made your first call to JSONPlaceholder! 😃</span>
+      <span id="run-message">Congrats you've made your first call to JSONPlaceholder! 😃 🎉</span>
 
       <p>
         <strong>Tip</strong>: you can use
@@ -336,20 +365,17 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>
+      <div style="margin-bottom: 2rem">
+        <a href="https://www.patreon.com/typicode">
+          <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="217">
+        </a>
+      </div>
+      <div>
         Coded and built with ❤️ by
         <a href="https://github.com/typicode">typicode</a>
-        <br> Source code available on
+        <br>Source code and CHANGELOG available on
         <a href="https://github.com/typicode/jsonplaceholder">GitHub</a>
-        <br>
-        <a href="https://github.com/typicode/jsonplaceholder/blob/master/CHANGELOG.md">CHANGELOG</a>
-      </p>
-      <p>
-        <!-- Later... -->
-        <!-- <a href="https://patreon.com/typicode">
-        <img alt="" src="become_a_patron_button.png">
-      </a> -->
-      </p>
+      </div>
     </div>
   </footer>
 
