@@ -6,6 +6,10 @@ It's like an [image placeholder](http://placehold.it/) but for web developers.
 
 JSONPlaceholder is powered by [JSON Server](https://github.com/typicode/json-server).
 
+<a href="https://www.patreon.com/typicode">
+  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
+
 ## Why?
 
 Most of the time when trying a new library, hacking a prototype or following a tutorial, I found myself in need of some data.
