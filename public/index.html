@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <script>hljs.initHighlightingOnLoad();</script>
   <title>JSONPlaceholder - Fake online REST API for developers</title>
   <style>
@@ -51,6 +52,12 @@
       font-weight: normal;
     }
 
+    header {
+      position: sticky;
+      top: 0;
+      background: #f8fafc;
+    }
+
     nav {
       text-align: center;
       border-bottom: 1px solid #f8fafc;
@@ -67,8 +74,12 @@
 
     nav li a {
       display: inline-block;
-      padding: 1rem;
-      color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      color: inherit;
+    }
+
+    nav li a i {
+      margin-right: .5rem;
     }
 
     .hljs {
@@ -102,6 +113,22 @@
       font-weight: normal;
       margin-top: 0;
       margin-bottom: 2rem;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20rem;
+      margin: auto;
+      border-radius: .2rem;
+      border: 1px dashed currentColor;
+    }
+
+    .box a {
+      display: inline-block;
+      padding: 4rem;
+      color: inherit;
     }
 
     .sponsors p {
@@ -153,9 +180,9 @@
   <header>
     <nav>
       <ul>
-        <li><a href="https://thanks.typicode.com">Supporters</a></li>
-        <li><a href="https://www.patreon.com/typicode">Patreon</a></li>
-        <li><a href="https://github.com/typicode">GitHub</a></li>
+        <li><a href="https://www.patreon.com/typicode" style="color: rgb(249, 104, 84)"><i class="fab fa-patreon"></i> Patreon</a></li>
+        <li><a href="https://thanks.typicode.com"><i class="far fa-laugh"></i> Supporters</a></li>
+        <li><a href="https://github.com/typicode"><i class="fab fa-github-alt"></i> GitHub</a></li>
       </ul>
     </nav>
   </header>
@@ -174,15 +201,25 @@
         +
         <a href="https://github.com/typicode/lowdb">LowDB</a>
       </p>
+
+      <p>
+        <a href="https://www.patreon.com/bePatron?c=784328">
+          <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="217">
+        </a>
+      </p>
     </div>
   </div>
 
   <!-- Sponsors -->
   <div class="sponsors">
     <h3>sponsored by</h3>
-    <p>
+    
+    <div class="box">
+      <a href="https://www.patreon.com/bePatron?c=784328">Your Company Logo Here</a>
+    </div>
+    <!-- <p>
       <a href="https://patreon.com/typicode">become a sponsor</a>
-    </p>
+    </p> -->
   </div>
 
   <!-- Main -->
@@ -356,7 +393,7 @@
   <footer>
     <div class="container">
       <div style="margin-bottom: 2rem">
-        <a href="https://www.patreon.com/typicode">
+        <a href="https://www.patreon.com/bePatron?c=784328">
           <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="217">
         </a>
       </div>
