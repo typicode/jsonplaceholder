@@ -1,0 +1,10 @@
+
+
+Live running client side web appliction:
+
+http://54.164.194.182:9111/index.html
+
+
+Get source code from git:
+
+https://github.com/git4davidan/AngularPrj/
