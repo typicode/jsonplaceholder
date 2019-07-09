@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <title>JSONPlaceholder - Fake online REST API for developers</title>
+  </head>
+
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="/">JSONPlaceholder</a></li>
+          <li><a href="/guide.html">Guide</a></li>
+          <li><a href="https://github.com/typicode">GitHub</a></li>
+          <li>
+            <a href="https://my-json-server.typicode.com">My JSON Server</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h2 id="guide">Guide</h2>
+<p>You can use JSONPlaceholder with any type of project that needs to get JSON data (React, Vue, Angular, Node, Rails, Swift, Android, …).</p>
+<p>Below you'll find examples using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a>. You can copy paste them in your browser Console to quickly test JSONPlaceholder.</p>
+<h2 id="getaresource">Get a resource</h2>
+<pre><code class="js language-js">fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response =&gt; response.json())
+  .then(json =&gt; console.log(json))
+
+// Output
+{
+  id: 1,
+  title: '[...]',
+  body: '[...]',
+  userId: 1
+}
+</code></pre>
+<div id="codefund"><!-- fallback content --></div>
+<script src="https://codefund.io/properties/338/funder.js" async="async"></script>
+<h2 id="listallresources">List all resources</h2>
+<pre><code class="js language-js">fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response =&gt; response.json())
+  .then(json =&gt; console.log(json))
+
+// Output
+[
+  { id: 1, title: '[...]' /* ... */ },
+  /* ... */
+  { id: 100, title: '[...]' /* ... */ }
+]
+</code></pre>
+<h2 id="createaresource">Create a resource</h2>
+<pre><code class="js language-js">fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(response =&gt; response.json())
+  .then(json =&gt; console.log(json))
+
+// Output
+{
+  id: 101,
+  title: 'foo',
+  body: 'bar',
+  userId: 1
+}
+</code></pre>
+<p>Important: the resource will not be really created on the server but it will be faked as if. In other words, if you try to access a post using 101 as an id, you'll get a 404 error.</p>
+<h2 id="updatearesource">Update a resource</h2>
+<pre><code class="js language-js">fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PUT',
+    body: JSON.stringify({
+      id: 1,
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(response =&gt; response.json())
+  .then(json =&gt; console.log(json))
+
+// Output
+{
+  id: 1,
+  title: 'foo',
+  body: 'bar',
+  userId: 1
+}
+</code></pre>
+<pre><code class="js language-js">fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PATCH',
+    body: JSON.stringify({
+      title: 'foo'
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(response =&gt; response.json())
+  .then(json =&gt; console.log(json))
+
+// Output
+{
+  id: 1,
+  title: 'foo',
+  body: '[...]',
+  userId: 1
+}
+</code></pre>
+<p>Important: the resource will not be really updated on the server but it will be faked as if. </p>
+<h2 id="deletearesource">Delete a resource</h2>
+<pre><code class="js language-js">fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE'
+})
+</code></pre>
+<p>Important: the resource will not be really deleted on the server but it will be faked as if. </p>
+<h2 id="filteringresources">Filtering resources</h2>
+<p>Basic filtering is supported through query parameters.</p>
+<pre><code class="js language-js">// Will return all the posts that belong to the first user
+fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+  .then(response =&gt; response.json())
+  .then(json =&gt; console.log(json))
+</code></pre>
+<h2 id="nestedresources">Nested resources</h2>
+<p>One level of nested route is available.</p>
+<pre><code class="js language-js">// Equivalent to /comments?postId=1
+fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+  .then(response =&gt; response.json())
+  .then(json =&gt; console.log(json))
+</code></pre>
+<p>Available nested routes:</p>
+<ul>
+<li><a href="https://jsonplaceholder.typicode.com/posts/1/comments">https://jsonplaceholder.typicode.com/posts/1/comments</a></li>
+<li><a href="https://jsonplaceholder.typicode.com/albums/1/photos">https://jsonplaceholder.typicode.com/albums/1/photos</a></li>
+<li><a href="https://jsonplaceholder.typicode.com/users/1/albums">https://jsonplaceholder.typicode.com/users/1/albums</a></li>
+<li><a href="https://jsonplaceholder.typicode.com/users/1/todos">https://jsonplaceholder.typicode.com/users/1/todos</a></li>
+<li><a href="https://jsonplaceholder.typicode.com/users/1/posts">https://jsonplaceholder.typicode.com/users/1/posts</a></li>
+</ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div style="margin-bottom: 2rem">
+          <a href="https://www.patreon.com/bePatron?c=784328">
+            <img
+              src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png"
+              width="217"
+            />
+          </a>
+        </div>
+        <div>
+          Coded and built with ❤️ by
+          <a href="https://github.com/typicode">typicode</a>
+          <br />Source code and CHANGELOG available on
+          <a href="https://github.com/typicode/jsonplaceholder">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Analytics -->
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-44497010-1", "typicode.com");
+      ga("send", "pageview");
+      var trackOutboundLink = function(url) {
+        ga("send", "event", "outbound", "click", url, {
+          transport: "beacon"
+        });
+      };
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script>
+      // Use http or https based on location.protocol
+      var example = document.getElementById("example");
+      example.textContent = example.textContent.replace(
+        "http:",
+        location.protocol
+      );
+
+      // Highlight result element
+      var result = document.getElementById("result");
+      hljs.highlightBlock(result);
+
+      // Run example
+      var runButton = document.getElementById("run-button");
+      runButton.onclick = function() {
+        var root = location.protocol + "//jsonplaceholder.typicode.com";
+        var runMessage = document.getElementById("run-message");
+
+        // Hide or disable things during API call
+        runButton.disabled = true;
+        runMessage.style.opacity = 0;
+        result.style.opacity = 0;
+
+        fetch("https://jsonplaceholder.typicode.com/todos/1")
+          .then(response => response.json())
+          .then(json => {
+            var str = JSON.stringify(json, null, "\t");
+
+            // Format result
+            result.innerHTML = str
+              .replace(/\n/g, "<br/>")
+              .replace(/\\n/g, " ")
+              .replace(/\t/g, "&nbsp;&nbsp;");
+
+            hljs.highlightBlock(result);
+
+            // Show and enable things after API call
+            runButton.disabled = false;
+            runMessage.style.opacity = 1;
+            result.style.opacity = 1;
+          });
+      };
+    </script>
+  </body>
+</html>

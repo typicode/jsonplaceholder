@@ -19,17 +19,23 @@
     "url": "https://github.com/typicode/jsonplaceholder.git"
   },
   "scripts": {
+    "build": "node build",
+    "build:watch": "nodemon --watch build.js --watch templates -e js,md,html build.js",
     "start": "node index",
     "test": "node test/app"
   },
   "dependencies": {
     "clone": "^1.0.2",
-    "json-server": "^0.14.1"
+    "json-server": "^0.14.1",
+    "marked": "^0.6.2"
   },
   "devDependencies": {
     "Faker": "~0.5.11",
     "husky": "^2.4.1",
+    "nodemon": "^1.19.1",
+    "pupa": "^2.0.0",
     "rosie": "~1.6.0",
+    "showdown": "^1.9.0",
     "supertest": "^3.1.0",
     "tape": "^4.5.1",
     "underscore": "~1.5.2"
