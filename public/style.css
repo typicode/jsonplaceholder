@@ -11,6 +11,16 @@ a {
   border-bottom: 1px solid transparent;
 }
 
+a.announcement {
+  display: block;
+  padding: 1rem;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #e4e4e4;
+  text-align: center;
+  background: #f8fafc;
+}
+
 a:hover {
   text-decoration: underline;
 }
@@ -38,14 +48,13 @@ h2 {
 header {
   position: sticky;
   top: 0;
-  background: #f8fafc;
+  background: #ffffff;
 }
 
 nav {
-  margin: 0 -1rem;
+  margin: 0;
   overflow-x: auto;
   text-align: center;
-  border-bottom: 1px solid #f8fafc;
 }
 
 nav ul {
@@ -82,7 +91,7 @@ td:first-child {
 .container {
   max-width: 60rem;
   margin: auto;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .hero {
