@@ -1,0 +1,170 @@
+body {
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: rgba(0, 0, 0, 0.84);
+  line-height: 1.5;
+}
+
+a {
+  color: #1e87f0;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  margin-top: 6rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #f8fafc;
+}
+
+nav {
+  margin: 0 -1rem;
+  overflow-x: auto;
+  text-align: center;
+  border-bottom: 1px solid #f8fafc;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li:first-of-type {
+  flex-grow: 1;
+  text-align: left;
+}
+
+nav li a {
+  display: block;
+  padding: 1rem;
+  color: inherit;
+  white-space: nowrap;
+}
+
+nav li a i {
+  margin-right: 0.5rem;
+}
+
+.hljs {
+  padding: 1rem;
+}
+
+td:first-child {
+  width: 8rem;
+}
+
+.container {
+  max-width: 60rem;
+  margin: auto;
+  padding: 1rem;
+}
+
+.hero {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.sponsors {
+  margin-bottom: 2rem;
+  padding: 6rem 0;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #e4e4e4;
+  text-align: center;
+}
+
+.sponsors h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  margin: auto;
+  border-radius: 0.2rem;
+  border: 1px dashed currentColor;
+}
+
+.box a {
+  display: inline-block;
+  padding: 4rem;
+  color: inherit;
+}
+
+.sponsors p {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+main {
+  margin-bottom: 6rem;
+}
+
+#run-button {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border-width: 0;
+  border-radius: 0.25rem;
+  background-color: #1e87f0;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+#run-message {
+  opacity: 0;
+  transition: all 0.25s;
+}
+
+pre {
+  /* hack */
+  background: #f8f8f8;
+}
+
+ul {
+  list-style: none;
+}
+
+#result {
+  margin: 1.5rem 0 0;
+  height: 176px;
+  opacity: 0;
+  transition: all 0.25s;
+}
+
+footer {
+  padding: 6rem;
+  background-color: #f8fafc;
+  text-align: center;
+}
