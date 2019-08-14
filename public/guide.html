@@ -82,7 +82,25 @@
   { id: 100, title: '[...]' /* ... */ }
 ]
 </code></pre>
-<h3 id="createaresource">Create a resource</h3>
+<h2 id="paginateallresources">Paginate all resources</h2>
+<p>Use <code>_page</code> and optionally <code>_limit</code> to paginate returned data.</p>
+<p>In the <code>link</code> header you'll get <code>"first"</code>, <code>"prev"</code>, <code>"next"</code> and <code>"last"</code> links.</p>
+<p><em>Source:</em> <a href="https://github.com/typicode/json-server/blob/master/README.md#paginate">https://github.com/typicode/json-server/blob/master/README.md#paginate</a></p>
+<pre><code class="js language-js">fetch('https://jsonplaceholder.typicode.com/posts?_page=1&amp;_limit=2')
+  .then(async response =&gt; {
+    const link = response.headers.get('link')
+    const json = await response.json()
+    console.log(link, json)
+  })
+
+// Output
+'&lt;http://jsonplaceholder.typicode.com/posts?_page=1&amp;_limit=2&gt;; rel="first", &lt;http://jsonplaceholder.typicode.com/posts?_page=2&amp;_limit=2&gt;; rel="next", &lt;http://jsonplaceholder.typicode.com/posts?_page=50&amp;_limit=2&gt;; rel="last"'
+[
+  { id: 1, title: '[...]' /* ... */ },
+  { id: 2, title: '[...]' /* ... */ }
+]
+</code></pre>
+<h2 id="createaresource">Create a resource</h2>
 <pre><code class="js language-js">fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
     body: JSON.stringify({
