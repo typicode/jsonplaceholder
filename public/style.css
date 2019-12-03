@@ -49,6 +49,7 @@ header {
   position: sticky;
   top: 0;
   background: #ffffff;
+  z-index: 999;
 }
 
 nav {
