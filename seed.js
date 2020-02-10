@@ -1,4 +1,4 @@
-// Run this to generate data.json
+// Run this to generate db.json
 var fs      = require('fs')
 var _       = require('underscore')
 var Factory = require('rosie').Factory
@@ -62,7 +62,7 @@ Factory.define('user')
 // Has many relationships
 // Users
 _(10).times(function () {
-  var user = Factory.build('user') 
+  var user = Factory.build('user')
   db.users.push(user)
 
   // Posts
@@ -71,7 +71,7 @@ _(10).times(function () {
     // attribute
     var post = Factory.build('post', {userId: user.id})
     db.posts.push(post)
-    
+
     // Comments
     _(5).times(function () {
       var comment = Factory.build('comment', {postId: post.id})
@@ -98,4 +98,4 @@ _(10).times(function () {
   })
 })
 
-fs.writeFileSync('db.json', JSON.stringify(db, null, 2));
+fs.writeFileSync('data/db.json', JSON.stringify(db, null, 2));

@@ -1,6 +1,6 @@
 const jsonServer = require('json-server')
 const clone = require('clone')
-const db = process.env.JSON_DB || 'data.json'
+const db = process.env.JSON_DB || 'db.json'
 const data = require('../data/' + db)
 
 const app = jsonServer.create()

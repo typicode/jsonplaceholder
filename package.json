@@ -22,7 +22,8 @@
     "build": "node build",
     "build:watch": "nodemon --watch build.js --watch templates -e js,md,html build.js",
     "start": "node index",
-    "test": "node test/app"
+    "test": "node test/app",
+    "generate-db": "node seed.js"
   },
   "dependencies": {
     "clone": "^1.0.2",
