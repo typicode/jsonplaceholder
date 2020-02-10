@@ -1,6 +1,7 @@
 const jsonServer = require('json-server')
 const clone = require('clone')
-const data = require('../data.json')
+const db = process.env.JSON_DB || 'data.json'
+const data = require('../data/' + db)
 
 const app = jsonServer.create()
 const router = jsonServer.router(clone(data), { _isFake: true })
