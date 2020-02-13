@@ -22,7 +22,7 @@
     "build": "node build",
     "build:watch": "nodemon --watch build.js --watch templates -e js,md,html build.js",
     "start": "node index",
-    "test": "node test/app",
+    "test": "unset JSON_DB && node test/app",
     "generate-db": "node seed.js"
   },
   "dependencies": {
