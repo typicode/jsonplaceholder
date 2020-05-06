@@ -11,14 +11,25 @@ a {
   border-bottom: 1px solid transparent;
 }
 
-a.announcement {
+div.announcement {
   display: block;
   padding: 1rem;
-  border-width: 1px 0;
+  font-weight: bold;
+  border-width: 0;
   border-style: solid;
-  border-color: #e4e4e4;
+  border-color: currentColor;
   text-align: center;
-  background: #f8fafc;
+  background: #ffe0b2;
+  color: #e65100;
+}
+
+div.announcement a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+div.announcement a:hover {
+  text-decoration: none;
 }
 
 a:hover {
@@ -56,6 +67,9 @@ nav {
   margin: 0;
   overflow-x: auto;
   text-align: center;
+  border-width: 0 0 1px 0;
+  border-color: #e4e4e4;
+  border-style: solid;
 }
 
 nav ul {
@@ -70,15 +84,19 @@ nav li:first-of-type {
   text-align: left;
 }
 
-nav li a {
-  display: block;
-  padding: 1rem;
-  color: inherit;
-  white-space: nowrap;
+nav li:first-of-type a {
+  padding-left: 0;
 }
 
-nav li a i {
-  margin-right: 0.5rem;
+nav li:last-of-type a {
+  padding-right: 0;
+}
+
+nav li a {
+  display: block;
+  padding: 1.5rem;
+  color: inherit;
+  white-space: nowrap;
 }
 
 .hljs {
@@ -160,6 +178,10 @@ main {
 pre {
   /* hack */
   background: #f8f8f8;
+}
+
+code {
+  padding: 2rem !important;
 }
 
 ul {

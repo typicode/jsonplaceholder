@@ -1,10 +1,12 @@
+<main>
+
 ## Guide
 
-You can use JSONPlaceholder with any type of project that needs to get JSON data (React, Vue, Angular, Node, Rails, Swift, Android, ...).
+You can use JSONPlaceholder with any type of project that needs to get JSON data (React, Vue, Node, Rails, Swift, Android, ...).
 
 Below you'll find examples using [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). You can copy paste them in your browser Console to quickly test JSONPlaceholder.
 
-## Get a resource
+### Get a resource
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts/1')
@@ -23,7 +25,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 <div id="codefund"><!-- fallback content --></div>
 <script src="https://codefund.io/properties/338/funder.js" async="async"></script>
 
-## List all resources
+### List all resources
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts')
@@ -38,7 +40,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 ]
 ```
 
-## Create a resource
+### Create a resource
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -66,7 +68,9 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 
 Important: the resource will not be really created on the server but it will be faked as if. In other words, if you try to access a post using 101 as an id, you'll get a 404 error.
 
-## Update a resource
+### Update a resource
+
+#### With PUT
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
@@ -93,6 +97,8 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 }
 ```
 
+#### With PATCH
+
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
     method: 'PATCH',
@@ -117,7 +123,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 
 Important: the resource will not be really updated on the server but it will be faked as if. 
 
-## Delete a resource
+### Delete a resource
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
@@ -127,7 +133,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 
 Important: the resource will not be really deleted on the server but it will be faked as if. 
 
-## Filtering resources
+### Filter resources
 
 Basic filtering is supported through query parameters.
 
@@ -138,7 +144,7 @@ fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
   .then(json => console.log(json))
 ```
 
-## Nested resources
+### Nested resources
 
 One level of nested route is available.
 
@@ -156,3 +162,5 @@ Available nested routes:
 * https://jsonplaceholder.typicode.com/users/1/albums
 * https://jsonplaceholder.typicode.com/users/1/todos
 * https://jsonplaceholder.typicode.com/users/1/posts
+
+</main>
