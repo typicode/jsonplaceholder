@@ -23,7 +23,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 ```
 
 <div id="codefund"><!-- fallback content --></div>
-<script src="https://codefund.io/properties/338/funder.js" async="async"></script>
+<script src="https://app.codefund.io/properties/338/funder.js" async="async"></script>
 
 ### List all resources
 
