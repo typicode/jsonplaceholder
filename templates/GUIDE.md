@@ -144,6 +144,15 @@ fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
   .then(json => console.log(json))
 ```
 
+### Limit resources
+
+```js
+// Will return only 10 todos
+fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
+
 ### Nested resources
 
 One level of nested route is available.
