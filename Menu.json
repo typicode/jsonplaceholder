@@ -1,0 +1,14 @@
+{
+    "Non-veg":[
+    {"item":"Pork","Cost":400},
+    {"item":"Chicken","Cost":200},
+    {"item":"Mutton","Cost":350},
+    {"item":"Fish","Cost":300},
+    {"item":"Prawns","Cost":500}
+    ],
+    "veg": [
+        {"item":"Veg-Sizzler","Cost":400},
+        {"item":"Paneer-Tikka","Cost":300}
+        
+        ]
+}
