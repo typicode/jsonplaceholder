@@ -38,7 +38,7 @@
     "showdown": "^1.9.1",
     "supertest": "^4.0.2",
     "tape": "^4.13.0",
-    "underscore": "~1.9.2"
+    "underscore": "~1.12.1"
   },
   "engines": {
     "node": "14.x"
