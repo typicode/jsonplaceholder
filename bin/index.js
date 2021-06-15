@@ -1,4 +1,5 @@
-const app = require('./src/app')
+#!/usr/bin/env node
+const app = require('../src/app')
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
