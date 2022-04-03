@@ -40,6 +40,30 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 ]
 ```
 
+### Paginate all resources
+
+Use `_page` and optionally `_limit` to paginate returned data.
+
+In the `link` header you'll get `"first"`, `"prev"`, `"next"` and `"last"` links.
+
+_Source:_ https://github.com/typicode/json-server/blob/master/README.md#paginate
+
+```js
+fetch('https://jsonplaceholder.typicode.com/posts?_page=1&_limit=2')
+  .then(async response => {
+    const link = response.headers.get('link')
+    const json = await response.json()
+    console.log(link, json)
+  })
+
+// Output
+'<http://jsonplaceholder.typicode.com/posts?_page=1&_limit=2>; rel="first", <http://jsonplaceholder.typicode.com/posts?_page=2&_limit=2>; rel="next", <http://jsonplaceholder.typicode.com/posts?_page=50&_limit=2>; rel="last"'
+[
+  { id: 1, title: '[...]' /* ... */ },
+  { id: 2, title: '[...]' /* ... */ }
+]
+```
+
 ### Create a resource
 
 ```js
@@ -121,7 +145,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 }
 ```
 
-Important: the resource will not be really updated on the server but it will be faked as if. 
+Important: the resource will not be really updated on the server but it will be faked as if.
 
 ### Delete a resource
 
@@ -131,7 +155,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 })
 ```
 
-Important: the resource will not be really deleted on the server but it will be faked as if. 
+Important: the resource will not be really deleted on the server but it will be faked as if.
 
 ### Filter resources
 
