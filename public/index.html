@@ -1,259 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"
-    />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-    <script>
-      hljs.initHighlightingOnLoad()
-    </script>
-    <title>JSONPlaceholder - Fake online REST API for developers</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="announcement">
-        This service is maintained and provided for free, please consider
-        supporting it on
-        <a href="https://github.com/users/typicode/sponsorship"
-          >GitHub Sponsors</a
-        >
-        ❤️
-      </div>
-      <nav class="container">
-        <ul>
-          <li><a href="/">JSONPlaceholder</a></li>
-          <li><a href="/guide.html">Guide</a></li>
-          <li><a href="https://github.com/typicode">GitHub</a></li>
-          <li>
-            <a href="https://my-json-server.typicode.com">My JSON Server</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+  <title>JSONPlaceholder - Fake online REST API for developers</title>
+</head>
 
-    <div class="container">
-        <!-- Hero -->
-  <div class="hero">
-    <div class="container">
-      <h1>
-        JSONPlaceholder
-      </h1>
-
-      <p class="subtitle">
-        Fake Online REST API for Testing and Prototyping
-        <br> <b>Serving ~350M requests per month</b>
-        <br> Powered by
-        <a href="https://github.com/typicode/json-server">JSON Server</a>
-        +
-        <a href="https://github.com/typicode/lowdb">LowDB</a>
-      </p>
-
-      <!-- <p> -->
-      <!--   <a href="https://www.patreon.com/bePatron?c=784328"> -->
-      <!--     <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="217"> -->
-      <!--   </a> -->
-      <!-- </p> -->
+<body>
+  <header>
+    <div class="announcement">
+      This service is maintained and provided for free, please consider
+      supporting it on
+      <a href="https://github.com/users/typicode/sponsorship">GitHub Sponsors</a>
+      ❤️
     </div>
-  </div>
+    <nav class="container">
+      <ul>
+        <li><a href="/">JSONPlaceholder</a></li>
+        <li><a href="/guide.html">Guide</a></li>
+        <li><a href="https://github.com/typicode">GitHub</a></li>
+        <li>
+          <a href="https://my-json-server.typicode.com">My JSON Server</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Sponsors -->
-  <div class="sponsors">
-    <h3>Gold Sponsors</h3>
-
-    <p>
-      <a href="https://tryretool.com/?utm_source=sponsor&utm_campaign=typicode" target="_blank">
-        <img src="https://i.imgur.com/IBItATn.png" height="70px">
-      </a>
-    </p>
-    
-    <p>
-      <a href="https://www.checklyhq.com/?utm_source=jsonplaceholder" target="_blank">
-        <img src="https://i.imgur.com/qS8XyfG.png" height="70px">
-      </a>
-    </p>
-
-    <p>
-      <a href="https://www.patreon.com/bePatron?c=784328">Your Company Logo Here</a>
-    </p>
-  </div>
-
-  <!-- Main -->
   <div class="container">
-    <main>
-      <!-- Intro -->
-      <h2>Intro</h2>
-      <p>
-        JSONPlaceholder is a free online REST API that you can use whenever you need some fake data.
-        <br>It's great for tutorials, testing new libraries, sharing code examples, ...
-      </p>
+    <!-- Hero -->
+    <div class="hero">
+      <div class="container">
+        <h1>
+          JSONPlaceholder
+        </h1>
 
-      <!-- Example -->
-      <h2>Example</h2>
-      <p>
-        Run this code in a console or from any site:
-      </p>
+        <p class="subtitle">
+          Fake Online REST API for Testing and Prototyping
+          <br> <b>Serving ~350M requests per month</b>
+          <br> Powered by
+          <a href="https://github.com/typicode/json-server">JSON Server</a>
+          +
+          <a href="https://github.com/typicode/lowdb">LowDB</a>
+        </p>
 
-      <pre><code id="example" class="javascript">fetch('https://jsonplaceholder.typicode.com/todos/1')
+        <!-- <p> -->
+        <!--   <a href="https://www.patreon.com/bePatron?c=784328"> -->
+        <!--     <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="217"> -->
+        <!--   </a> -->
+        <!-- </p> -->
+      </div>
+    </div>
+
+    <!-- Sponsors -->
+    <div class="sponsors">
+      <h3>Gold Sponsors</h3>
+      <div class="sponsors-logos">
+        <p>
+          <a href="https://tryretool.com/?utm_source=sponsor&utm_campaign=typicode" target="_blank">
+            <img src="https://i.imgur.com/IBItATn.png" height="70px">
+          </a>
+        </p>
+
+        <p>
+          <a href="https://www.checklyhq.com/?utm_source=jsonplaceholder" target="_blank">
+            <img src="https://i.imgur.com/qS8XyfG.png" height="70px">
+          </a>
+        </p>
+      </div>
+      <p>
+        <a href="https://www.patreon.com/bePatron?c=784328">Your Company Logo Here</a>
+      </p>
+    </div>
+
+    <!-- Main -->
+    <div class="container">
+      <main>
+        <!-- Intro -->
+        <h2>Intro</h2>
+        <p>
+          JSONPlaceholder is a free online REST API that you can use whenever you need some fake data.
+          <br>It's great for tutorials, testing new libraries, sharing code examples, ...
+        </p>
+
+        <!-- Example -->
+        <h2>Example</h2>
+        <p>
+          Run this code in a console or from any site:
+        </p>
+
+        <pre><code id="example" class="javascript">fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(response => response.json())
   .then(json => console.log(json))
 </code></pre>
 
-      <p>
-        <button id="run-button">Try it</button>
-      </p>
+        <p>
+          <button id="run-button">Try it</button>
+        </p>
 
-      <pre><code id="result" class="json"></code></pre>
-      <span id="run-message">Congrats you've made your first call to JSONPlaceholder! 😃 🎉</span>
+        <pre><code id="result" class="json"></code></pre>
+        <span id="run-message">Congrats you've made your first call to JSONPlaceholder! 😃 🎉</span>
 
-      <p>
-        <strong>Tip</strong>: you can use
-        <b>
-          http://
-        </b> or
-        <b>
-          https://
-        </b> when making requests to JSONPlaceholder.
-      </p>
+        <p>
+          <strong>Tip</strong>: you can use
+          <b>
+            http://
+          </b> or
+          <b>
+            https://
+          </b> when making requests to JSONPlaceholder.
+        </p>
 
-      <div id="codefund"><!-- fallback content --></div>
-      <script src="https://app.codefund.io/properties/338/funder.js" async="async"></script>
+        <div id="codefund"><!-- fallback content --></div>
+        <script src="https://app.codefund.io/properties/338/funder.js" async="async"></script>
 
-      <!-- Resources -->
-      <h2>Resources</h2>
-      <p>
-        JSONPlaceholder comes with a set of 6 common resources:
-      </p>
+        <!-- Resources -->
+        <h2>Resources</h2>
+        <p>
+          JSONPlaceholder comes with a set of 6 common resources:
+        </p>
 
-      <table class="resources">
-        <tr>
-          <td>
-            <a href="/posts">/posts</a>
-          </td>
-          <td>100 posts</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="/comments">/comments</a>
-          </td>
-          <td>500 comments</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="/albums">/albums</a>
-          </td>
-          <td>100 albums</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="/photos">/photos</a>
-          </td>
-          <td>5000 photos</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="/todos">/todos</a>
-          </td>
-          <td>200 todos</td>
-        </tr>
-        <tr>
-          <td>
-            <a href="/users">/users</a>
-          </td>
-          <td>10 users</td>
-        </tr>
-      </table>
+        <table class="resources">
+          <tr>
+            <td>
+              <a href="/posts">/posts</a>
+            </td>
+            <td>100 posts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/comments">/comments</a>
+            </td>
+            <td>500 comments</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/albums">/albums</a>
+            </td>
+            <td>100 albums</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/photos">/photos</a>
+            </td>
+            <td>5000 photos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/todos">/todos</a>
+            </td>
+            <td>200 todos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/users">/users</a>
+            </td>
+            <td>10 users</td>
+          </tr>
+        </table>
 
-      <p>
-        <strong>Note</strong>: resources have relations. For example:
-        <b>posts</b> have many
-        <b>comments</b>,
-        <b>albums</b> have many
-        <b>photos</b>, ... see below for routes examples.
-      </p>
+        <p>
+          <strong>Note</strong>: resources have relations. For example:
+          <b>posts</b> have many
+          <b>comments</b>,
+          <b>albums</b> have many
+          <b>photos</b>, ... see below for routes examples.
+        </p>
 
-      <!-- Routes -->
-      <h2>Routes</h2>
-      <p>
-        All HTTP methods are supported.
-      </p>
+        <!-- Routes -->
+        <h2>Routes</h2>
+        <p>
+          All HTTP methods are supported.
+        </p>
 
-      <table>
-        <tr>
-          <td>GET</td>
-          <td>
-            <a href="/posts">/posts</a>
-          </td>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>
-            <a href="/posts/1">/posts/1</a>
-          </td>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>
-            <a href="/posts/1/comments">/posts/1/comments</a>
-          </td>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>
-            <a href="/comments?postId=1">/comments?postId=1</a>
-          </td>
-        </tr>
-        <tr>
-          <td>GET</td>
-          <td>
-            <a href="/posts?userId=1">/posts?userId=1</a>
-          </td>
-        </tr>
-        <tr>
-          <td>POST</td>
-          <td>/posts</td>
-        </tr>
-        <tr>
-          <td>PUT</td>
-          <td>/posts/1</td>
-        </tr>
-        <tr>
-          <td>PATCH</td>
-          <td>/posts/1</td>
-        </tr>
-        <tr>
-          <td>DELETE</td>
-          <td>/posts/1</td>
-        </tr>
-        </tr>
-      </table>
+        <table>
+          <tr>
+            <td>GET</td>
+            <td>
+              <a href="/posts">/posts</a>
+            </td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>
+              <a href="/posts/1">/posts/1</a>
+            </td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>
+              <a href="/posts/1/comments">/posts/1/comments</a>
+            </td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>
+              <a href="/comments?postId=1">/comments?postId=1</a>
+            </td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>
+              <a href="/posts?userId=1">/posts?userId=1</a>
+            </td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>/posts</td>
+          </tr>
+          <tr>
+            <td>PUT</td>
+            <td>/posts/1</td>
+          </tr>
+          <tr>
+            <td>PATCH</td>
+            <td>/posts/1</td>
+          </tr>
+          <tr>
+            <td>DELETE</td>
+            <td>/posts/1</td>
+          </tr>
+          </tr>
+        </table>
 
-      <p>
-        <strong>Note</strong>: you can view detailed examples
-        <a href="/guide/">here</a>.
-      </p>
+        <p>
+          <strong>Note</strong>: you can view detailed examples
+          <a href="/guide/">here</a>.
+        </p>
 
-      <!-- JSON Server -->
-      <h2>Use your own data</h2>
-      <!-- <p>
+        <!-- JSON Server -->
+        <h2>Use your own data</h2>
+        <!-- <p>
         <a href="https://github.com/typicode/json-server">JSON Server</a>
         powers this website. You can use it to create the same fake API in less than
         <strong>30 seconds</strong> with your own data.
@@ -261,49 +248,50 @@
 
       <pre><code class="bash">npm install json-server</code></pre> -->
 
-      <p>
-        With <a href="https://my-json-server.typicode.com">My JSON Server</a> online service and a simple GitHub repo, you can have your own online fake REST server in seconds.
-      </p>
-    </main>
-  </div>
-
+        <p>
+          With <a href="https://my-json-server.typicode.com">My JSON Server</a> online service and a simple GitHub repo,
+          you can have your own online fake REST server in seconds.
+        </p>
+      </main>
     </div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div style="margin-bottom: 2rem;">
-          <!-- <a href="https://www.patreon.com/bePatron?c=784328"> -->
-          <!--   <img -->
-          <!--     src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" -->
-          <!--     width="217" -->
-          <!--   /> -->
-          <!-- </a> -->
-          <a href="https://github.com/users/typicode/sponsorship">
-            <i class="fab fa-github-alt"></i>
-            <strong>Sponsor this project on GitHub</strong>
-          </a>
-        </div>
-        <div>
-          Coded and built with ❤️ by
-          <a href="https://github.com/typicode">typicode</a>
-          <br />Source code and CHANGELOG available on
-          <a href="https://github.com/typicode/jsonplaceholder">GitHub</a>
-        </div>
-      </div>
-    </footer>
+  </div>
 
-    <!-- Analytics -->
-    <script>
-      ;(function (i, s, o, g, r, a, m) {
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div style="margin-bottom: 2rem;">
+        <!-- <a href="https://www.patreon.com/bePatron?c=784328"> -->
+        <!--   <img -->
+        <!--     src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" -->
+        <!--     width="217" -->
+        <!--   /> -->
+        <!-- </a> -->
+        <a href="https://github.com/users/typicode/sponsorship">
+          <i class="fab fa-github-alt"></i>
+          <strong>Sponsor this project on GitHub</strong>
+        </a>
+      </div>
+      <div>
+        Coded and built with ❤️ by
+        <a href="https://github.com/typicode">typicode</a>
+        <br />Source code and CHANGELOG available on
+        <a href="https://github.com/typicode/jsonplaceholder">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Analytics -->
+  <script>
+      ; (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r
-        ;(i[r] =
-          i[r] ||
-          function () {
-            ;(i[r].q = i[r].q || []).push(arguments)
-          }),
-          (i[r].l = 1 * new Date())
-        ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+          ; (i[r] =
+            i[r] ||
+            function () {
+              ; (i[r].q = i[r].q || []).push(arguments)
+            }),
+            (i[r].l = 1 * new Date())
+          ; (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
         a.async = 1
         a.src = g
         m.parentNode.insertBefore(a, m)
@@ -314,58 +302,59 @@
         '//www.google-analytics.com/analytics.js',
         'ga',
       )
-      ga('create', 'UA-44497010-1', 'typicode.com')
-      ga('send', 'pageview')
-      var trackOutboundLink = function (url) {
-        ga('send', 'event', 'outbound', 'click', url, {
-          transport: 'beacon',
+    ga('create', 'UA-44497010-1', 'typicode.com')
+    ga('send', 'pageview')
+    var trackOutboundLink = function (url) {
+      ga('send', 'event', 'outbound', 'click', url, {
+        transport: 'beacon',
+      })
+    }
+  </script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+  <script>
+    // Use http or https based on location.protocol
+    var example = document.getElementById('example')
+    example.textContent = example.textContent.replace(
+      'http:',
+      location.protocol,
+    )
+
+    // Highlight result element
+    var result = document.getElementById('result')
+    hljs.highlightBlock(result)
+
+    // Run example
+    var runButton = document.getElementById('run-button')
+    runButton.onclick = function () {
+      var root = location.protocol + '//jsonplaceholder.typicode.com'
+      var runMessage = document.getElementById('run-message')
+
+      // Hide or disable things during API call
+      runButton.disabled = true
+      runMessage.style.opacity = 0
+      result.style.opacity = 0
+
+      fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then((response) => response.json())
+        .then((json) => {
+          var str = JSON.stringify(json, null, '\t')
+
+          // Format result
+          result.innerHTML = str
+            .replace(/\n/g, '<br/>')
+            .replace(/\\n/g, ' ')
+            .replace(/\t/g, '&nbsp;&nbsp;')
+
+          hljs.highlightBlock(result)
+
+          // Show and enable things after API call
+          runButton.disabled = false
+          runMessage.style.opacity = 1
+          result.style.opacity = 1
         })
-      }
-    </script>
+    }
+  </script>
+</body>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
-    <script>
-      // Use http or https based on location.protocol
-      var example = document.getElementById('example')
-      example.textContent = example.textContent.replace(
-        'http:',
-        location.protocol,
-      )
-
-      // Highlight result element
-      var result = document.getElementById('result')
-      hljs.highlightBlock(result)
-
-      // Run example
-      var runButton = document.getElementById('run-button')
-      runButton.onclick = function () {
-        var root = location.protocol + '//jsonplaceholder.typicode.com'
-        var runMessage = document.getElementById('run-message')
-
-        // Hide or disable things during API call
-        runButton.disabled = true
-        runMessage.style.opacity = 0
-        result.style.opacity = 0
-
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
-          .then((response) => response.json())
-          .then((json) => {
-            var str = JSON.stringify(json, null, '\t')
-
-            // Format result
-            result.innerHTML = str
-              .replace(/\n/g, '<br/>')
-              .replace(/\\n/g, ' ')
-              .replace(/\t/g, '&nbsp;&nbsp;')
-
-            hljs.highlightBlock(result)
-
-            // Show and enable things after API call
-            runButton.disabled = false
-            runMessage.style.opacity = 1
-            result.style.opacity = 1
-          })
-      }
-    </script>
-  </body>
 </html>
