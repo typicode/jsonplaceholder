@@ -54,6 +54,18 @@ h2 {
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: normal;
+  overflow: hidden;
+}
+
+h2:after {
+  content: "";
+  display: inline-block;
+  height: inherit;
+  vertical-align: middle;
+  width: 100%;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 1px double black;
 }
 
 header {
@@ -124,7 +136,10 @@ td:first-child {
   border-width: 1px 0;
   border-style: solid;
   border-color: #e4e4e4;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sponsors h3 {
@@ -199,4 +214,29 @@ footer {
   padding: 6rem;
   background-color: #f8fafc;
   text-align: center;
+}
+
+.sponsors-logos {
+  display: flex;
+  padding: 1em;
+  gap: 10%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sponsors-logos p {
+  max-width: 50%;
+}
+
+.sponsors-logos p img {
+  height: 75px;
+  width: 150px;
+  object-fit: fill;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+  }
 }
