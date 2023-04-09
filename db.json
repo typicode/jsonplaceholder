@@ -1,0 +1,52 @@
+{
+  "flowers": [
+    {
+      "id": 1,
+      "name": "Rose",
+      "color": "Red",
+      "description": "A classic symbol of love and affection, roses come in a variety of colors and have a sweet fragrance."
+    },
+    {
+      "id": 2,
+      "name": "Lily",
+      "color": "White",
+      "description": "With their trumpet-shaped flowers and sweet fragrance, lilies are often associated with purity and innocence."
+    },
+    {
+      "id": 3,
+      "name": "Tulip",
+      "color": "Yellow",
+      "description": "Tulips are a favorite spring flower, symbolizing new beginnings and renewal. They come in many colors, including yellow, red, pink, and purple."
+    },
+    {
+      "id": 4,
+      "name": "Daisy",
+      "color": "White",
+      "description": "With their simple, cheerful appearance, daisies symbolize innocence and purity. They are often used in floral arrangements and wedding bouquets."
+    },
+    {
+      "id": 5,
+      "name": "Sunflower",
+      "color": "Yellow",
+      "description": "Sunflowers are known for their bright yellow petals and brown centers, and are a symbol of happiness, warmth, and prosperity."
+    },
+    {
+      "id": 6,
+      "name": "Orchid",
+      "color": "Purple",
+      "description": "Orchids are exotic flowers with intricate shapes and patterns. They symbolize love, luxury, and strength, and come in many colors, including purple, pink, and white."
+    },
+    {
+      "id": 7,
+      "name": "Carnation",
+      "color": "Pink",
+      "description": "Carnations are a popular choice for Mother's Day and weddings, and come in many colors, including pink, red, and white. They symbolize love, fascination, and distinction."
+    },
+    {
+      "id": 8,
+      "name": "Peony",
+      "color": "Pink",
+      "description": "Peonies are large, fragrant flowers that come in shades of pink, white, and red. They are often used in bridal bouquets and symbolize romance, prosperity, and good fortune."
+    }
+  ]
+}
