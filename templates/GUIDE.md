@@ -144,6 +144,29 @@ fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
   .then(json => console.log(json))
 ```
 
+Pagination filtering is supported through query parameters.
+
+```js
+// Will return the posts that id from 11 to 20 that belong to the first user
+fetch('https://jsonplaceholder.typicode.com/posts?_start=10&_limit=10')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
+
+Array param filtering is supported through query parameters.
+
+```js
+// Will return the posts that belong to the users id in(2,5,10,12) 
+fetch('https://jsonplaceholder.typicode.com/posts?userId=2&userId=5&userId=10&userId=12')
+  .then(response => response.json())
+  .then(json => console.log(json))
+
+// Will return the posts that id in(2,5,10,12)
+fetch('https://jsonplaceholder.typicode.com/posts?id=2&id=5&id=10&id=12')
+  .then(response => response.json())
+  .then(json => console.log(json))  
+```
+
 ### Nested resources
 
 One level of nested route is available.
