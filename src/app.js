@@ -6,6 +6,17 @@ const app = jsonServer.create()
 const router = jsonServer.router(clone(data), { _isFake: true })
 
 app.use((req, res, next) => {
+  if (req.query.delay) {
+    const delay = parseInt(req.query.delay, 10)
+    if (delay > 0) {
+      setTimeout(next, delay)
+      return
+    }
+  }
+  next()
+})
+
+app.use((req, res, next) => {
   if (req.path === '/') return next()
   router.db.setState(clone(data))
   next()

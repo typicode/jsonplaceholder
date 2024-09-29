@@ -163,4 +163,11 @@ Available nested routes:
 * https://jsonplaceholder.typicode.com/users/1/todos
 * https://jsonplaceholder.typicode.com/users/1/posts
 
+### Delay
+
+With any request, add a <code style="padding: 0 !important;">delay=N</code> query string parameter to simulate a slow-running API response.
+
+* https://jsonplaceholder.typicode.com/posts/1/comments?delay=500
+* https://jsonplaceholder.typicode.com/posts?userId=1&delay=1000
+
 </main>
