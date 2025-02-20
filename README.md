@@ -37,3 +37,44 @@ I hope you will find it useful.
 ## Guide
 
 For examples and more, you can visit https://jsonplaceholder.typicode.com
+
+## Detailed Examples
+
+For each endpoint, example requests and responses are provided to demonstrate how the API works. See example responses for GET, POST, PUT, and DELETE requests so you can understand the data structure. Each request shows possible parameters and returns detailed response bodies.
+
+## Error Handling
+
+This API includes error responses for common HTTP status codes, such as:
+
+- **404 Not Found**: If a requested resource does not exist.
+- **500 Internal Server Error**: If something goes wrong on the server side.
+- **400 Bad Request**: If the request format is invalid.
+
+### Example:
+
+```json
+{
+  "error": "Resource not found"
+}
+```
+
+## Rate Limiting
+
+While there are no official rate limits for this API, you should avoid sending too many requests in a short period of time to prevent being blocked. In case of rate-limiting, a relevant HTTP status code will be returned.
+
+## Advanced Filters and Query Parameters
+
+JSONPlaceholder supports a variety of query parameters for more advanced data retrieval, such as filtering by user ID, limiting the number of posts, or sorting data.
+
+### Example:
+
+```http
+GET /posts?userId=1&limit=5
+```
+
+This retrieves the first 5 posts for a user with ID 1.
+
+## Common Use Cases
+
+- **Mock Data for Front-End Development**: Use JSONPlaceholder to populate your app with placeholder data while you work on UI/UX.
+- **Prototype Quickly**: If you need a quick backend for your project, this API can serve as a temporary solution for things like user posts, comments, and other common data structures.
